@@ -1,0 +1,639 @@
+/**font**/
+
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+    margin: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role='list'],
+ol[role='list'] {
+    list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+    scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+    min-height: 100vh;
+    text-rendering: optimizeSpeed;
+    line-height: 1.5;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+    text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+    max-width: 100%;
+    display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+    font: inherit;
+}
+
+
+/**general styling**/
+:root {
+    --text-dark: #111;
+    --bg-light: #fefefe;
+
+    --bg-light-very:#f3f3f3;
+
+    --text-muted: #DADADA;
+    --bg-dark: #111;
+
+    --link-primary: #da2228;
+    --link-hover: #9c191d;
+}
+
+html,
+body {
+    font-family: 'Source Sans Pro', sans-serif;
+    margin: 0;
+    padding: 0;
+    color: var(--text-dark);
+}
+
+h1 {
+    font-size: clamp(24px, 2vw, 42px);
+    font-weight: 900;
+}
+
+h2 {
+    font-size: clamp(24px, 2vw, 42px);
+    font-weight: 900;
+}
+
+h3 {
+    font-size: clamp(24px, 2vw, 42px);
+    font-weight: 900;
+}
+
+h4 {
+    font-size: clamp(24px, 2vw, 42px);
+    font-weight: 900;
+}
+
+p {
+    font-size: clamp(14px, 2vw, 20px);
+    font-weight: 400;
+}
+
+a {
+    text-decoration: none;
+    font-size: clamp(16px, 2vw, 21px);
+    color: var(--link-primary);
+}
+
+a:hover {
+    color: var(--link-hover);
+}
+
+button {
+    cursor: pointer;
+    pointer-events: all;
+    border: none;
+    outline: none;
+    background: none;
+}
+
+nav {
+    position: fixed;
+    width: 100%;
+    min-height: 3.25rem;
+    background-color: var(--bg-light-very);
+    border-bottom: 2px solid var(--text-muted);
+    z-index: 9999;
+}
+
+nav .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-direction: row;
+    margin: 0 3rem;
+    padding-top: .75rem;
+}
+
+nav ul {
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    gap: 22px;
+    vertical-align: middle;
+    margin: 1.75rem 0;
+    padding-left: 28px;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+.container-img {
+    max-width: 52px;
+    height: auto;
+    background-color: var(--bg-light);
+    border-radius: 50%;
+}
+
+.container-1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    vertical-align: middle;
+}
+
+.container-1 span {
+    font-weight: 900;
+    letter-spacing: -.2px;
+    margin: .5rem;
+}
+
+nav ul li {
+    max-width: fit-content;
+    margin: 0;
+}
+
+nav ul li a {
+    font-weight: 700;
+    letter-spacing: .4px;
+}
+
+nav ul li {
+    animation: fade-in .75s;
+    animation-duration: .75s;
+    animation-fill-mode: forwards;
+}
+
+li:nth-child(1) {
+    transition-delay: 200ms;
+}
+
+li:nth-child(2) {
+    transition-delay: 300ms;
+}
+
+li:nth-child(3) {
+    transition-delay: 400ms;
+}
+
+li:nth-child(4) {
+    transition-delay: 525ms;
+}
+
+@keyframes fade-in {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+.hamburger {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    width: 30px;
+    height: auto;
+    display: none;
+    cursor: pointer;
+}
+
+.hamburger .line {
+    background: var(--text-dark);
+    border-radius: 1px;
+    width: 100%;
+    height: 2px;
+    transition: .4s;
+    position: relative;
+    right: 0;
+}
+
+.hamburger.open {
+    visibility: visible;
+    animation: fade-out 1.25s forwards;
+    transition: opacity 1s;
+}
+
+@keyframes fade-out {
+    0% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+.container li {
+    display: none;
+}
+
+/*resize*/
+.hamburger {
+    display: flex;
+    position: absolute;
+    top: 25px;
+    right: 50px;
+    margin-right: 22px;
+}
+
+.container.round .hamburger {
+    margin-right: 0;
+}
+
+.container.round.full .hamburger {
+    top: 25px;
+}
+
+.hamburger.open .line {
+    background-color: var(--bg-dark);
+}
+
+.container.full .container-1 span {
+    color: var(--bg-dark);
+}
+
+.container.full li {
+    display: flex;
+    flex-direction: column;
+}
+
+nav .container {
+    max-height: 70px;
+    transition: max-height 0.5s;
+}
+
+.container.full {
+    max-width: 90%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 0 auto;
+    background: #ffffffba;
+    backdrop-filter: blur(10px);
+    border-bottom-right-radius: 50px;
+    border-bottom-left-radius: 50px;
+    padding: 15px 50px;
+    border: 1px solid #c8def7b8;
+    box-shadow: 0 2px 9px rgb(0 0 0 / 22%);
+    padding-bottom: 80px;
+    transition: max-height 1s;
+}
+
+.container.full .links {
+    flex-direction: column;
+    opacity: 0;
+    transition: 1s ease;
+    margin-right: 0;
+}
+
+.container.full .links {
+    top: 60px;
+    opacity: 1;
+    transition: 0.8s;
+}
+
+.container.full {
+    max-height: 500px;
+    transition: max-height 1s;
+}
+
+.container-full, .container-full > * {
+    z-index: 9999;
+}
+
+main {
+    width: 100%;
+    min-height: 100vh;
+}
+
+section {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    z-index: 9;
+}
+
+/** VIDEO **/
+#content {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: 9;
+}
+
+video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: inline-block;
+    z-index: -1;
+}
+/*resize video*/
+@media screen and (min-width: 767px) {
+    video {
+        max-height: 100vh;
+    }
+}
+/** END VIDEO **/
+
+.container-layout > * {
+    z-index: 9999;
+}
+
+.container-layout {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 999;
+}
+
+@media screen and (max-width: 767px) {
+    section#hero {
+        min-height: 95vh;
+    }
+}
+
+.buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: auto;
+    background-color: transparent;
+    outline: 2px solid var(--bg-dark);
+    backdrop-filter: blur(22px);
+    z-index: 999;
+    height: auto;
+    max-width: 767px;
+    padding: 2rem 6rem;
+    border-radius: 8px;
+}
+
+.button button {
+    border-radius: 8px;
+    background-color: var(--link-primary);
+    color: var(--bg-light);
+    padding: 18px 46px;
+    font-weight: 800;
+    margin: 1.5rem 0;
+}
+
+a.button {
+    max-width: fit-content;
+}
+
+section#hero>* {
+    color: var(--bg-light);
+}
+
+section#hero {
+    min-height: 100vh;
+    background: rgba(0,0,0, 0.4);
+}
+
+.button.work {
+    z-index: 9;
+}
+
+.button.work img {
+    max-width: 400px;
+    max-height: 400px;
+    background-size: cover;
+}
+
+.title {
+    font-size: clamp(32px, 2vw, 44px);
+    margin: 0;
+}
+
+.buttons span {
+    margin-bottom: .75rem;
+}
+
+a.button:hover button {
+    transform: scale(1.03);
+    background-color: var(--link-hover);
+    box-shadow: 0px 0px 42px -18px rgba(226,21,21,0.75);
+    -webkit-box-shadow: 0px 0px 42px -18px rgba(226,21,21,0.75);
+    -moz-box-shadow: 0px 0px 42px -18px rgba(226,21,21,0.75);
+}
+
+.container-layout {
+    margin: 0 auto;
+    text-align: left;
+    min-height: 100vh;
+    width: 75%;
+    display: flex;
+    align-items: left;
+    justify-content: left;
+    flex-direction: column;
+}
+
+/*40% +- 60vh*/
+.container-layout .about {
+    height: 60vh;
+    display: flex;
+    justify-content: left;
+    align-items: left;
+    flex-direction: column;
+    margin-top: auto;
+}
+
+.about h1.title {
+    font-weight: 900;
+    font-size: 62px;
+}
+
+.about span {
+    font-size: clamp(26px, 1vw, 34px);
+}
+
+.about .card {
+    display: flex;
+    justify-content: left;
+    align-items: left;
+    flex-direction: column;
+   
+}
+
+.bottom {
+    transform: translateY(-100px);
+    z-index: 9999;
+}
+
+.bottom a {
+    color: var(--bg-light);
+}
+
+.bottom a:hover {
+    transform: scale(1.112);
+    font-size: 24px;
+}
+
+.bottom #about-btn {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+}
+
+.bottom #about-btn span {
+    font-size: 16px;
+}
+
+.container .card {
+    color: var(--text-dark);
+    border-radius: 12px;
+    backdrop-filter: blur(12px);
+    padding: 1.75rem 2.5rem;
+    outline: 1.5px solid var(--text-muted);
+    box-shadow: 0px 0px 50px -15px rgba(216, 216, 216, 1);
+    -webkit-box-shadow: 0px 0px 50px -15px rgba(216, 216, 216, 1);
+    -moz-box-shadow: 0px 0px 50px -15px rgba(216, 216, 216, 1);
+}
+
+section#about .card h1 {
+    margin-top: .75rem;
+    margin-bottom: .2rem;
+    font-weight: 900;
+    font-size: clamp(28px, 1.5vw, 46px);
+}
+
+section#about .card span {
+    display: flex;
+    vertical-align: middle;
+    flex-direction: row;
+    margin-bottom: .4rem;
+    font-weight: 600;
+    font-size: clamp(16px, 1.5vw, 24px);
+}
+
+section#about .card p {
+    font-weight: 400;
+}
+
+.card .logo {
+    max-width: 60px;
+    height: auto;
+}
+
+.card p {
+    margin: .75rem 0;
+}
+
+
+/************ works ************/
+section#works {
+    margin: 0;
+}
+
+/*container*/
+.grid {
+    display: flex;
+    flex-wrap: wrap;
+}
+/*item container*/
+.grid > .item {
+    width: 25%;
+    height: 240px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+}
+/*resize container works*/
+@media screen and (max-width: 767px) {
+    .grid {
+      flex-direction: column;
+      flex-wrap: no-wrap;
+    }
+    .grid .item {
+      width: 100%;
+    }
+}
+
+#works .container {
+    min-height: auto;
+    margin: auto;
+}
+
+/** end works **/
+
+
+/** contact **/
+section#contact {
+    background-color: var(--bg-dark);
+    min-height: 20vh;
+}
+
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+}
+
+footer ul {
+    display: flex;
+    list-style: none;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 0 ;
+}
+
+footer ul li {
+    max-width: fit-content;
+    margin: 0 1rem;
+}
+
+span#copy {
+    color: var(--bg-light);
+    font-weight: 300;
+    margin: 2rem auto;
+}
+
+/** end contact **/
