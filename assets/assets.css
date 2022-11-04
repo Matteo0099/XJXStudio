@@ -1,11 +1,12 @@
 /**font**/
-
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700;1,900&display=swap');
 
 /* Box sizing rules */
 *,
 *::before,
 *::after {
     box-sizing: border-box;
+    margin: 0;
 }
 
 /* Remove default margin */
@@ -84,17 +85,17 @@ body {
 }
 
 h1 {
-    font-size: clamp(24px, 2vw, 42px);
+    font-size: clamp(34px, 2vw, 42px);
     font-weight: 900;
 }
 
 h2 {
-    font-size: clamp(24px, 2vw, 42px);
+    font-size: clamp(30px, 2vw, 42px);
     font-weight: 900;
 }
 
 h3 {
-    font-size: clamp(24px, 2vw, 42px);
+    font-size: clamp(26px, 2vw, 42px);
     font-weight: 900;
 }
 
@@ -110,7 +111,7 @@ p {
 
 a {
     text-decoration: none;
-    font-size: clamp(16px, 2vw, 21px);
+    font-size: clamp(18px, 2vw, 22px);
     color: var(--link-primary);
 }
 
@@ -124,6 +125,11 @@ button {
     border: none;
     outline: none;
     background: none;
+}
+
+svg {
+    vertical-align: middle;
+    vertical-align: -webkit-baseline-middle;
 }
 
 nav {
@@ -150,7 +156,7 @@ nav ul {
     list-style: none;
     gap: 22px;
     vertical-align: middle;
-    margin: 1.75rem 0;
+    margin: 3rem 0 1rem 0;
     padding-left: 28px;
 }
 
@@ -191,25 +197,7 @@ nav ul li a {
 }
 
 nav ul li {
-    animation: fade-in .75s;
-    animation-duration: .75s;
-    animation-fill-mode: forwards;
-}
-
-li:nth-child(1) {
-    transition-delay: 200ms;
-}
-
-li:nth-child(2) {
-    transition-delay: 300ms;
-}
-
-li:nth-child(3) {
-    transition-delay: 400ms;
-}
-
-li:nth-child(4) {
-    transition-delay: 525ms;
+    animation: fade-in .5s;
 }
 
 @keyframes fade-in {
@@ -390,9 +378,41 @@ video {
     z-index: 999;
 }
 
-@media screen and (max-width: 767px) {
+/*resize*/
+@media only screen and (max-width: 767px) {
     section#hero {
         min-height: 95vh;
+    }
+    h1, .container-layout .about h1.title {
+        font-size: 45px;
+        line-height: 1;
+    } 
+    h2 {
+        font-size: 32px;
+    }
+    h3 {
+        font-size: 28px;
+    }
+    nav .container {
+        margin: 0rem;
+    }
+    span {
+        line-height: 1.8;
+    }
+    .hamburger {
+        right: 18px;
+    }
+    .container-1 {
+        margin-left: 18px;
+    }
+    .container.full .container-1 {
+        margin: 0 2rem 0 0;
+    }
+}
+
+@media only screen and (max-width: 767px) and (max-height: 767px) {
+    .container-layout .about {
+        height: 70vh !important; 
     }
 }
 
@@ -416,13 +436,14 @@ video {
     border-radius: 8px;
     background-color: var(--link-primary);
     color: var(--bg-light);
-    padding: 18px 46px;
+    padding: 18px 54px;
     font-weight: 800;
     margin: 1.5rem 0;
 }
 
 a.button {
     max-width: fit-content;
+    max-height: fit-content;
 }
 
 section#hero>* {
@@ -431,7 +452,7 @@ section#hero>* {
 
 section#hero {
     min-height: 100vh;
-    background: rgba(0,0,0, 0.4);
+    /*background: rgba(0,0,0, 0.4);*/
 }
 
 .button.work {
@@ -491,14 +512,6 @@ a.button:hover button {
     font-size: clamp(26px, 1vw, 34px);
 }
 
-.about .card {
-    display: flex;
-    justify-content: left;
-    align-items: left;
-    flex-direction: column;
-   
-}
-
 .bottom {
     transform: translateY(-100px);
     z-index: 9999;
@@ -511,6 +524,8 @@ a.button:hover button {
 .bottom a:hover {
     transform: scale(1.112);
     font-size: 24px;
+    background: rgba(0,0,0, 0.6) !important;
+    transition: .2s all ease-in;
 }
 
 .bottom #about-btn {
@@ -519,6 +534,17 @@ a.button:hover button {
     justify-content: center;
     align-items: center;
     margin: 0 auto;
+    max-width: fit-content;
+    border-radius: 12px;
+    background: rgba(0,0,0, 0.125);
+    padding: .973rem 1.8rem;
+}
+
+/*heigh overflow*/
+@media screen and (max-height: 767px) {
+    .bottom {
+        display: none;
+    }
 }
 
 .bottom #about-btn span {
@@ -529,11 +555,24 @@ a.button:hover button {
     color: var(--text-dark);
     border-radius: 12px;
     backdrop-filter: blur(12px);
-    padding: 1.75rem 2.5rem;
+    padding: 2rem 3.25rem;
+    margin: .25rem;
     outline: 1.5px solid var(--text-muted);
     box-shadow: 0px 0px 50px -15px rgba(216, 216, 216, 1);
     -webkit-box-shadow: 0px 0px 50px -15px rgba(216, 216, 216, 1);
     -moz-box-shadow: 0px 0px 50px -15px rgba(216, 216, 216, 1);
+
+    display: flex;
+    justify-content: left;
+    align-items: left;
+    flex-direction: column;
+}
+
+.about .card {
+    display: flex;
+    justify-content: left;
+    align-items: left;
+    flex-direction: column;
 }
 
 section#about .card h1 {
@@ -547,9 +586,17 @@ section#about .card span {
     display: flex;
     vertical-align: middle;
     flex-direction: row;
-    margin-bottom: .4rem;
+    margin-bottom: .01rem;
     font-weight: 600;
     font-size: clamp(16px, 1.5vw, 24px);
+}
+
+#filmer {
+    display: flex;
+}
+
+#filmer svg {
+    margin-left: .25rem;
 }
 
 section#about .card p {
@@ -575,6 +622,7 @@ section#works {
 .grid {
     display: flex;
     flex-wrap: wrap;
+    margin: 2.5rem auto;
 }
 /*item container*/
 .grid > .item {
@@ -583,6 +631,7 @@ section#works {
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;
+    text-align: center;
 }
 /*resize container works*/
 @media screen and (max-width: 767px) {
@@ -592,12 +641,17 @@ section#works {
     }
     .grid .item {
       width: 100%;
+      height: auto;
     }
 }
 
 #works .container {
     min-height: auto;
     margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 /** end works **/
@@ -606,13 +660,16 @@ section#works {
 /** contact **/
 section#contact {
     background-color: var(--bg-dark);
-    min-height: 20vh;
+    min-height: 25vh;
+    margin-top: 2rem;
+    padding: 2rem 0;
 }
 
 footer {
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
     margin: 0 auto;
 }
 
@@ -625,6 +682,17 @@ footer ul {
     padding: 0 ;
 }
 
+footer .banner {
+    max-width: 100%;
+    height: auto;
+    margin: 1rem 0 2rem 0;
+    padding: 1rem;
+}
+
+footer .banner .banner-title {
+    color: var(--link-primary);
+}
+
 footer ul li {
     max-width: fit-content;
     margin: 0 1rem;
@@ -633,7 +701,33 @@ footer ul li {
 span#copy {
     color: var(--bg-light);
     font-weight: 300;
-    margin: 2rem auto;
+    margin: 1.25rem auto;
 }
 
-/** end contact **/
+footer .mail {
+    display: flex;
+    vertical-align: middle;
+    align-items: center;
+    justify-content: center;
+    margin: 1rem auto;
+}
+
+footer .mail svg {
+    align-self: center;
+    vertical-align: middle;
+}
+
+#a-mail {
+    margin: 1rem auto;
+}
+
+#a-mail:hover {
+    font-style: italic;
+}
+
+footer ul li a:hover svg {
+    transform: rotate(360deg);
+    transition: .6s all ease-in-out 0ms;
+}
+
+/** end contact (footer)**/

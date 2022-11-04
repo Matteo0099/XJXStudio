@@ -6,7 +6,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>XJX-STUDIOS</title>
         <link rel="icon" href="./public/Logofranci.png">
-        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.googleapis.com" defer>
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700;1,900&display=swap" rel="stylesheet"> 
         <link rel="stylesheet" href="./assets/assets.css">
@@ -100,18 +100,35 @@
             <section id="works">
                 <div class="container">
                     <h1 class="title">My Works</h1>
+                    <p class="work-in-progress">...Work in progress...</p>
                     <div class="grid">
                         <div class="item">
-                            Item1
+                            <!--item1-->
+                            <div class="card">
+                                <h2>Project1</h2>
+                                <p class="work-in-progress">Cooming soon...</p>
+                            </div>
                         </div>
                         <div class="item">
-                            Item2
+                            <!--Item2-->
+                            <div class="card">
+                                <h2>Project2</h2>
+                                <p class="work-in-progress">Cooming soon...</p>
+                            </div>
                         </div>
                         <div class="item">
-                            Item3
+                            <!--Item3-->
+                            <div class="card">
+                                <h2>Project3</h2>
+                                <p class="work-in-progress">Cooming soon...</p>
+                            </div>
                         </div>
                         <div class="item">
-                            Item4
+                            <!--Item4-->
+                            <div class="card">
+                                <h2>Project4</h2>
+                                <p class="work-in-progress">Cooming soon...</p>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -119,6 +136,11 @@
 
             <section id="contact">
                 <footer>
+                    <div class="banner">
+                        <h1 class="banner-title">
+                            CONTACT ME!
+                        </h1>
+                    </div>
                     <ul>
                         <li>
                             <a href="">
@@ -173,11 +195,22 @@
                             </a>
                         </li>
                     </ul>
+                    <div class="mail">
+                        <a href="mailto:francesco.19.versace@icloud.com" id="a-mail">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-mailgun" width="24" height="24" viewBox="0 0 24 24" stroke-width="1" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                                <path d="M17 12a2 2 0 1 0 4 0a9 9 0 1 0 -2.987 6.697"></path>
+                                <circle cx="12" cy="12" r="5"></circle>
+                                <circle cx="12" cy="12" r="1"></circle>
+                                <circle cx="12" cy="12" r="1"></circle>
+                            </svg> francesco.19.versace@icloud.com
+                        </a>
+                    </div>
                 </footer>
                 <span id="copy">All rights reserved | Matteo M. &copy; 2022</span>
             </section>
         </main>
 
-        <script src="./src/script.js"></script>
+        <script src="./src/script.js" defer></script>
     </body>
 </html>

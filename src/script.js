@@ -6,4 +6,3 @@ function nav() {
 	document.querySelector(".line3").classList.toggle("changed3");*/
     document.querySelector(".hamburger").classList.toggle("open");
 }
-
