@@ -90,22 +90,22 @@ h1 {
 }
 
 h2 {
-    font-size: clamp(30px, 2vw, 42px);
-    font-weight: 900;
+    font-size: clamp(30px, 2vw, 39px);
+    font-weight: 800;
 }
 
 h3 {
-    font-size: clamp(26px, 2vw, 42px);
-    font-weight: 900;
+    font-size: clamp(26px, 2vw, 38px);
+    font-weight: 800;
 }
 
 h4 {
-    font-size: clamp(24px, 2vw, 42px);
-    font-weight: 900;
+    font-size: clamp(24px, 2vw, 36px);
+    font-weight: 700;
 }
 
 p {
-    font-size: clamp(14px, 2vw, 20px);
+    font-size: clamp(14px, 2vw, 22px);
     font-weight: 400;
 }
 
@@ -612,10 +612,79 @@ section#about .card p {
     margin: .75rem 0;
 }
 
+/************ services ************/
+section#services{
+    display: flex;
+    flex-direction: row; /* colums layout */
+    flex-wrap: wrap; /* wrap in multiple lines if it's necessary */
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+}
+
+section#services .container {
+    text-align: center;
+}
+
+section#services .container h1 {
+    margin: 2rem auto;
+}
+
+section#services .wrapper {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    flex-grow: 3; /* ability for a flex item to grow if necessary */
+    flex-shrink: 0; /* ability for a flex item to shrink if necessary */
+    flex-basis: auto; /* defines the default size of an element before the remaining space is distributed */
+    width: 100%;
+    margin: 0 auto;
+}
+
+section#services .wrapper .item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    flex: 1;
+}
+
+section#services .wrapper .item .card {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 500px;
+    max-width: 400px;
+    margin: 0 .5rem;
+}
+
+section#services h1.title {
+    font-size: clamp(38px, 4vw, 45px);
+}
+
+section#services .wrapper .item .card h2 {
+    margin: 1.5rem auto;
+}
+
+/**resize**/
+@media screen and (max-width: 767px) {
+    section#services .wrapper {
+        flex-direction: column;
+    }    
+    section#services .wrapper .item {
+        margin: 1rem 0;
+    }
+    section#works {
+        margin-top: 200px;
+    }
+}
+/************ end services ************/
+
 
 /************ works ************/
 section#works {
-    margin: 0;
+    color: var(--text-dark);
 }
 
 /*container*/
@@ -627,7 +696,7 @@ section#works {
 /*item container*/
 .grid > .item {
     width: 25%;
-    height: 240px;
+    height: auto;
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;
@@ -642,7 +711,20 @@ section#works {
     .grid .item {
       width: 100%;
       height: auto;
+      margin: 1rem auto;
     }
+}
+
+section#works .card {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 500px;
+    max-width: 400px;
+    margin: 0 .5rem;
+    /*only for trial*/
+    padding: 2rem 4rem;
 }
 
 #works .container {
@@ -661,8 +743,8 @@ section#works {
 section#contact {
     background-color: var(--bg-dark);
     min-height: 25vh;
-    margin-top: 2rem;
-    padding: 2rem 0;
+    margin-top: 3rem;
+    padding: 3rem 0;
 }
 
 footer {
@@ -679,7 +761,8 @@ footer ul {
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    padding: 0 ;
+    padding: 0;
+    margin: .5rem auto;
 }
 
 footer .banner {
@@ -691,6 +774,7 @@ footer .banner {
 
 footer .banner .banner-title {
     color: var(--link-primary);
+    font-size: clamp(38px, 4vw, 45px);
 }
 
 footer ul li {
@@ -718,11 +802,14 @@ footer .mail svg {
 }
 
 #a-mail {
-    margin: 1rem auto;
+    margin: 0 auto;
+    padding: 1rem 0;
 }
 
 #a-mail:hover {
-    font-style: italic;
+    -webkit-transform: scale3d(1.1,1.1,1.1);
+    transform: scale3d(1.1,1.1,1.1);
+    transition: all .5s cubic-bezier(.335,.015,.46,.995);
 }
 
 footer ul li a:hover svg {
