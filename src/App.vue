@@ -6,7 +6,7 @@
     <!-- main page -->
     <main class="main-content min-h-screen">
       <video autoplay muted loop id="myVideo">
-        <source src="https://player.vimeo.com/progressive_redirect/playback/897102984/rendition/1080p/file.mp4?loc=external&log_user=0&signature=9328f48ed5eac8a60ced387f8095a5aa71e185466ceb23e06603d5ff2e61577a" type="video/mp4">
+        <source src="/video/provaVideo.mp4" type="video/mp4">
         Your browser does not support HTML5 video.
       </video> 
       <!-- (fake) navigation -->
