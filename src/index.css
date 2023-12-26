@@ -7,11 +7,28 @@
     font-family: 'Nunito Sans', sans-serif !important;
     color: #fefefe;
     background: #202321;
+    text-wrap: balance !important;
   }
 
   h1, h2, h3, h4, h5, h6, p, span, caption, pre, select, textarea, input, button {
     color: #fefefe;
     font-family: inherit;
+  }
+
+  .accent {
+    color: #da2228 !important;
+  }
+
+  .bg-accent {
+    background: #da2228 !important;
+  }
+
+  .border-accent {
+    border-color: #da2228;
+  }
+
+  .outline-accent {
+    outline-color: #da2228;
   }
 
   .nav-list.open {
@@ -83,7 +100,7 @@
   }
 
   .slide-out.openSlide {
-    background: red;
+    background: #da2228;
     width: 100vw;
     height: 100vh;
     position: absolute;
@@ -124,5 +141,185 @@
       padding-left: 4%;
       padding-right: 4%;
     }
+  }
+
+  /** home **/
+  .home {
+    height: calc(100vh - 180px);
+  }
+
+  /** infinite scroller **/
+  .scroll {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin: 0 auto;
+    width: 90vw;
+    overflow: hidden;
+    -webkit-mask-image: -webkit-gradient(linear, left top, right top, from(transparent), color-stop(20%, #fff), color-stop(80%, #fff), to(transparent));
+    -webkit-mask-image: linear-gradient(90deg, transparent, #fff 20%, #fff 80%, transparent)
+  }
+
+  .scroll div {
+    white-space: nowrap;
+    -webkit-animation: scroll var(--time) linear infinite;
+    animation: scroll var(--time) linear infinite;
+    -webkit-animation-delay: calc(var(--time)*-1);
+    animation-delay: calc(var(--time)*-1);
+
+  }
+
+  .scroll div:nth-child(2) {
+    -webkit-animation: scroll2 var(--time) linear infinite;
+    animation: scroll2 var(--time) linear infinite;
+    -webkit-animation-delay: calc(var(--time)/-2);
+    animation-delay: calc(var(--time)/-2);
+  }
+
+  @-webkit-keyframes scroll {
+    0% {
+      -webkit-transform: translateX(100%);
+      transform: translateX(100%);
+    }
+
+    100% {
+      -webkit-transform: translateX(-100%);
+      transform: translateX(-100%);
+    }
+  }
+
+  @keyframes scroll {
+    0% {
+      -webkit-transform: translateX(100%);
+      transform: translateX(100%);
+    }
+
+    100% {
+      -webkit-transform: translateX(-100%);
+      transform: translateX(-100%);
+    }
+  }
+
+  @-webkit-keyframes scroll2 {
+    0% {
+      -webkit-transform: translateX(0);
+      transform: translateX(0);
+    }
+
+    100% {
+      -webkit-transform: translateX(-200%);
+      transform: translateX(-200%);
+    }
+  }
+
+  @keyframes scroll2 {
+    0% {
+      -webkit-transform: translateX(0);
+      transform: translateX(0);
+    }
+
+    100% {
+      -webkit-transform: translateX(-200%);
+      transform: translateX(-200%);
+    }
+  }
+
+  .scroll div span {
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    margin: 10px;
+    letter-spacing: 0.2em;
+    background: #333;
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 5px;
+    -webkit-transition: 0.5s;
+    -o-transition: 0.5s;
+    transition: 0.5s;
+  }
+
+  .scroll div span:hover {
+    background: #da2228;
+    cursor: pointer;
+  }
+
+  .imgBox div {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+  }
+
+  .imgBox img {
+    max-width: 100px !important;
+    scale: 0.8;
+    margin: 0 2rem;
+  }
+
+  /** video bg **/
+  #myVideo {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    min-width: 100%; 
+    min-height: 100%;
+    object-fit: cover;
+  }
+  
+  .content {
+    position: absolute;
+    top: 33%;
+    left: 0;
+    background: rgba(0, 0, 0, 0.5);
+    color: #f1f1f1;
+    width: 100%;
+    padding: 20px;
+  }
+
+  @media screen and (min-width: 967px) {
+    .content {
+      left: 17.5%;
+    }
+  }
+  
+  #myBtn {
+    width: 177px;
+    border: none;
+    background: #da2228;
+    color: #fefefe;
+    cursor: pointer;
+    transition: transform 500ms ease;
+  }
+  
+  #myBtn:hover {
+    opacity: .9;
+  }
+
+  #myBtn svg {
+    transition: transform 500ms ease;
+  }
+
+  #myBtn:hover svg {
+    transform: translateX(6px);
+    transition: transform 250ms ease;
+  }
+
+  @media screen and (max-width: 660px) {
+    .fakeNav {
+      flex-wrap: wrap;
+      justify-content: center !important;
+      align-items: center !important;
+    }
+
   }
 }
