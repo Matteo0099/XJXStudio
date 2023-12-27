@@ -7,6 +7,7 @@
     <main class="main-content min-h-screen">
       <video autoplay muted loop id="myVideo">
         <source src="/video/provaVideo.mp4" type="video/mp4">
+        <source src="/video/provaVideoH264.h264?url" type="video/H.264">
         Your browser does not support HTML5 video.
       </video> 
       <!-- (fake) navigation -->
