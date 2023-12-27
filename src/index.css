@@ -10,6 +10,12 @@
     text-wrap: balance !important;
   }
 
+  video::webkit-media-controls-volume-slider,
+  video::webkit-media-controls-mute-button,
+  video::webkit-media-controls-pause-button {
+    display: none !important;
+  }
+
   video::-webkit-media-controls-panel {
     display: none !important;
     opacity: 0 !important;

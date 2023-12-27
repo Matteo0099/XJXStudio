@@ -7,6 +7,7 @@
     <main class="main-content min-h-screen">
       <video id="myVideo" 
         autoplay="true"
+        v-bind:autoplay="true"
         :autoplay="true" 
         loop="true" 
         :loop="true"
