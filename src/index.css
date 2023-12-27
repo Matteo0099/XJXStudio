@@ -10,6 +10,11 @@
     text-wrap: balance !important;
   }
 
+  video::-webkit-media-controls-panel {
+    display: none !important;
+    opacity: 0 !important;
+  }
+
   h1, h2, h3, h4, h5, h6, p, span, caption, pre, select, textarea, input, button {
     color: #fefefe;
     font-family: inherit;
@@ -263,7 +268,7 @@
   .imgBox img {
     max-width: 100px !important;
     scale: 0.8;
-    margin: 0 2rem;
+    margin: 0 4rem;
   }
 
   /** video bg **/

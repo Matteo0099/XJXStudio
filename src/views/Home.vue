@@ -17,44 +17,44 @@
     </div>
     <div class="scroll imgBox" style="--time:100s">
       <div>
-        <img src="/logo.jpeg" role="img" title="logo XJXSTUDIS" alt="Image">
-        <img src="/logo.jpeg" role="img" title="logo XJXSTUDIS" alt="Image">
-        <img src="/logo.jpeg" role="img" title="logo XJXSTUDIS" alt="Image">
-        <img src="/logo.jpeg" role="img" title="logo XJXSTUDIS" alt="Image">
-        <img src="/logo.jpeg" role="img" title="logo XJXSTUDIS" alt="Image">
-        <img src="/logo.jpeg" role="img" title="logo XJXSTUDIS" alt="Image">
-        <img src="/logo.jpeg" role="img" title="logo XJXSTUDIS" alt="Image">
-        <img src="/logo.jpeg" role="img" title="logo XJXSTUDIS" alt="Image">
-        <img src="/logo.jpeg" role="img" title="logo XJXSTUDIS" alt="Image">
-        <img src="/logo.jpeg" role="img" title="logo XJXSTUDIS" alt="Image">
-        <img src="/logo.jpeg" role="img" title="logo XJXSTUDIS" alt="Image">
-        <img src="/logo.jpeg" role="img" title="logo XJXSTUDIS" alt="Image">
-        <img src="/logo.jpeg" role="img" title="logo XJXSTUDIS" alt="Image">
-        <img src="/logo.jpeg" role="img" title="logo XJXSTUDIS" alt="Image">
-        <img src="/logo.jpeg" role="img" title="logo XJXSTUDIS" alt="Image">
-        <img src="/logo.jpeg" role="img" title="logo XJXSTUDIS" alt="Image">
-        <img src="/logo.jpeg" role="img" title="logo XJXSTUDIS" alt="Image">
-        <img src="/logo.jpeg" role="img" title="logo XJXSTUDIS" alt="Image">
+        <img src="/logo_2.png" role="img" title="logo XJXSTUDIS" alt="Image">
+        <img src="/logo_2.png" role="img" title="logo XJXSTUDIS" alt="Image">
+        <img src="/logo_2.png" role="img" title="logo XJXSTUDIS" alt="Image">
+        <img src="/logo_2.png" role="img" title="logo XJXSTUDIS" alt="Image">
+        <img src="/logo_2.png" role="img" title="logo XJXSTUDIS" alt="Image">
+        <img src="/logo_2.png" role="img" title="logo XJXSTUDIS" alt="Image">
+        <img src="/logo_2.png" role="img" title="logo XJXSTUDIS" alt="Image">
+        <img src="/logo_2.png" role="img" title="logo XJXSTUDIS" alt="Image">
+        <img src="/logo_2.png" role="img" title="logo XJXSTUDIS" alt="Image">
+        <img src="/logo_2.png" role="img" title="logo XJXSTUDIS" alt="Image">
+        <img src="/logo_2.png" role="img" title="logo XJXSTUDIS" alt="Image">
+        <img src="/logo_2.png" role="img" title="logo XJXSTUDIS" alt="Image">
+        <img src="/logo_2.png" role="img" title="logo XJXSTUDIS" alt="Image">
+        <img src="/logo_2.png" role="img" title="logo XJXSTUDIS" alt="Image">
+        <img src="/logo_2.png" role="img" title="logo XJXSTUDIS" alt="Image">
+        <img src="/logo_2.png" role="img" title="logo XJXSTUDIS" alt="Image">
+        <img src="/logo_2.png" role="img" title="logo XJXSTUDIS" alt="Image">
+        <img src="/logo_2.png" role="img" title="logo XJXSTUDIS" alt="Image">
       </div>
       <div>
-        <img src="/logo.jpeg" role="img" title="logo XJXSTUDIS" alt="Image">
-        <img src="/logo.jpeg" role="img" title="logo XJXSTUDIS" alt="Image">
-        <img src="/logo.jpeg" role="img" title="logo XJXSTUDIS" alt="Image">
-        <img src="/logo.jpeg" role="img" title="logo XJXSTUDIS" alt="Image">
-        <img src="/logo.jpeg" role="img" title="logo XJXSTUDIS" alt="Image">
-        <img src="/logo.jpeg" role="img" title="logo XJXSTUDIS" alt="Image">
-        <img src="/logo.jpeg" role="img" title="logo XJXSTUDIS" alt="Image">
-        <img src="/logo.jpeg" role="img" title="logo XJXSTUDIS" alt="Image">
-        <img src="/logo.jpeg" role="img" title="logo XJXSTUDIS" alt="Image">
-        <img src="/logo.jpeg" role="img" title="logo XJXSTUDIS" alt="Image">
-        <img src="/logo.jpeg" role="img" title="logo XJXSTUDIS" alt="Image">
-        <img src="/logo.jpeg" role="img" title="logo XJXSTUDIS" alt="Image">
-        <img src="/logo.jpeg" role="img" title="logo XJXSTUDIS" alt="Image">
-        <img src="/logo.jpeg" role="img" title="logo XJXSTUDIS" alt="Image">
-        <img src="/logo.jpeg" role="img" title="logo XJXSTUDIS" alt="Image">
-        <img src="/logo.jpeg" role="img" title="logo XJXSTUDIS" alt="Image">
-        <img src="/logo.jpeg" role="img" title="logo XJXSTUDIS" alt="Image">
-        <img src="/logo.jpeg" role="img" title="logo XJXSTUDIS" alt="Image">
+        <img src="/logo_2.png" role="img" title="logo XJXSTUDIS" alt="Image">
+        <img src="/logo_2.png" role="img" title="logo XJXSTUDIS" alt="Image">
+        <img src="/logo_2.png" role="img" title="logo XJXSTUDIS" alt="Image">
+        <img src="/logo_2.png" role="img" title="logo XJXSTUDIS" alt="Image">
+        <img src="/logo_2.png" role="img" title="logo XJXSTUDIS" alt="Image">
+        <img src="/logo_2.png" role="img" title="logo XJXSTUDIS" alt="Image">
+        <img src="/logo_2.png" role="img" title="logo XJXSTUDIS" alt="Image">
+        <img src="/logo_2.png" role="img" title="logo XJXSTUDIS" alt="Image">
+        <img src="/logo_2.png" role="img" title="logo XJXSTUDIS" alt="Image">
+        <img src="/logo_2.png" role="img" title="logo XJXSTUDIS" alt="Image">
+        <img src="/logo_2.png" role="img" title="logo XJXSTUDIS" alt="Image">
+        <img src="/logo_2.png" role="img" title="logo XJXSTUDIS" alt="Image">
+        <img src="/logo_2.png" role="img" title="logo XJXSTUDIS" alt="Image">
+        <img src="/logo_2.png" role="img" title="logo XJXSTUDIS" alt="Image">
+        <img src="/logo_2.png" role="img" title="logo XJXSTUDIS" alt="Image">
+        <img src="/logo_2.png" role="img" title="logo XJXSTUDIS" alt="Image">
+        <img src="/logo_2.png" role="img" title="logo XJXSTUDIS" alt="Image">
+        <img src="/logo_2.png" role="img" title="logo XJXSTUDIS" alt="Image">
       </div>
     </div>
   </div>

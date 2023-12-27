@@ -5,11 +5,22 @@
   <div id="app" class="overflow-x-hidden">
     <!-- main page -->
     <main class="main-content min-h-screen">
-      <video autoplay muted loop id="myVideo">
-        <source src="/video/provaVideo.mp4" type="video/mp4">
-        <source src="/video/provaVideoH264.h264?url" type="video/H.264">
-        Your browser does not support HTML5 video.
-      </video> 
+      <video id="myVideo" 
+        autoplay="true"
+        :autoplay="true" 
+        loop="true" 
+        :loop="true"
+        muted="muted" 
+        :muted="muted"
+        preload="auto"
+        :preload="auto"
+        playsinline="playsinline"
+        :playsinline="playsinline"
+        controls="false"
+        :controls="false"
+      > <!--autoplay-->  
+        <source src="/video/video_sito_compressed.mp4" >
+      </video>
       <!-- (fake) navigation -->
       <div class="w-full sticky top-0 left-0 right-0 z-[999] max-h-20 min-h-[40px] h-full bg-accent border-2 border-accent outline-2 outline-accent p-0">
         <nav class="fakeNav py-1.5 flex justify-start items-center">
