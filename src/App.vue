@@ -5,31 +5,18 @@
   <div id="app" class="overflow-x-hidden">
     <!-- main page -->
     <main class="main-content min-h-screen">
-      <video 
-        src="/video/video_sito_compressed.mp4"
-        id="myVideo"
-        autoplay="true"
-        v-bind:autoplay="true"
-        :autoplay="true" 
-        loop="true" 
-        :loop="true"
-        muted="muted" 
-        :muted="muted"
-        preload="auto"
-        :preload="auto"
-        playsinline="playsinline"
-        :playsinline="playsinline"
-        controls="false"
-        :controls="false"
-      > <!--autoplay-->  
+      <video src="/video/video_sito_compressed.mp4" id="myVideo" autoplay="true" loop="true" muted="muted"
+        playsinline="playsinline"> <!--autoplay-->
       </video>
       <!-- (fake) navigation -->
-      <div class="w-full sticky top-0 left-0 right-0 z-[999] max-h-20 min-h-[40px] h-full bg-accent border-2 border-accent outline-2 outline-accent p-0">
+      <div
+        class="w-full sticky top-0 left-0 right-0 z-[999] max-h-20 min-h-[40px] h-full bg-accent border-2 border-accent outline-2 outline-accent p-0">
         <nav class="fakeNav py-1.5 flex justify-start items-center">
           <div class="social-wrap flex ml-5 gap-3 text-sm">
             <a href="" target="_blank">
-              <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler hover:opacity-70 icon-tabler-brand-instagram" width="18"
-                height="18" viewBox="0 0 24 24" stroke-width="1.9" stroke="#fefefe" fill="none" stroke-linecap="round"
+              <svg xmlns="http://www.w3.org/2000/svg"
+                class="icon icon-tabler hover:opacity-70 icon-tabler-brand-instagram" width="18" height="18"
+                viewBox="0 0 24 24" stroke-width="1.9" stroke="#fefefe" fill="none" stroke-linecap="round"
                 stroke-linejoin="round">
                 <path stroke="none" d="M0 0h24v24H0z" fill="none" />
                 <path d="M4 4m0 4a4 4 0 0 1 4 -4h8a4 4 0 0 1 4 4v8a4 4 0 0 1 -4 4h-8a4 4 0 0 1 -4 -4z" />
@@ -38,16 +25,17 @@
               </svg>
             </a>
             <a href="" target="_blank">
-              <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler hover:opacity-70 icon-tabler-brand-facebook" width="18"
-                height="18" viewBox="0 0 24 24" stroke-width="1.5" stroke="#fefefe" fill="none" stroke-linecap="round"
-                stroke-linejoin="round">
+              <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler hover:opacity-70 icon-tabler-brand-facebook"
+                width="18" height="18" viewBox="0 0 24 24" stroke-width="1.5" stroke="#fefefe" fill="none"
+                stroke-linecap="round" stroke-linejoin="round">
                 <path stroke="none" d="M0 0h24v24H0z" fill="none" />
                 <path d="M7 10v4h3v7h4v-7h3l1 -4h-4v-2a1 1 0 0 1 1 -1h3v-4h-3a5 5 0 0 0 -5 5v2h-3" fill="#fefefe" />
               </svg>
             </a>
             <a href="" target="_blank">
-              <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler hover:opacity-70 icon-tabler-brand-youtube-filled" width="18"
-                height="18" viewBox="0 0 24 24" stroke-width="1.5" stroke="#fefefe" fill="none" stroke-linecap="round"
+              <svg xmlns="http://www.w3.org/2000/svg"
+                class="icon icon-tabler hover:opacity-70 icon-tabler-brand-youtube-filled" width="18" height="18"
+                viewBox="0 0 24 24" stroke-width="1.5" stroke="#fefefe" fill="none" stroke-linecap="round"
                 stroke-linejoin="round">
                 <path stroke="none" d="M0 0h24v24H0z" fill="none" />
                 <path
@@ -56,8 +44,9 @@
               </svg>
             </a>
             <a href="" target="_blank">
-              <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler hover:opacity-70 icon-tabler-brand-tiktok-filled" width="18"
-                height="18" viewBox="0 0 24 24" stroke-width="1.5" stroke="#fefefe" fill="none" stroke-linecap="round"
+              <svg xmlns="http://www.w3.org/2000/svg"
+                class="icon icon-tabler hover:opacity-70 icon-tabler-brand-tiktok-filled" width="18" height="18"
+                viewBox="0 0 24 24" stroke-width="1.5" stroke="#fefefe" fill="none" stroke-linecap="round"
                 stroke-linejoin="round">
                 <path stroke="none" d="M0 0h24v24H0z" fill="none" />
                 <path
@@ -90,7 +79,7 @@
             </svg>
           </div>
         </nav>
-      </div>     
+      </div>
       <!-- for content of the page -->
       <router-view v-slot="{ Component, route }">
         <div :key="route.name" class="min-h-screen max-w-full overflow-x-hidden">
@@ -112,29 +101,24 @@
       <div class="inner-wrap">
         <ul class="gap-4 hidden" ref="listNav">
           <li>
-            <RouterLink
-            class="hover:underline hover:text-gray-50 transition-colors"
-            to="/" @click="openNav">Home</RouterLink>
+            <RouterLink class="hover:underline hover:text-gray-50 transition-colors" to="/" @click="openNav">Home
+            </RouterLink>
           </li>
           <li>
-            <RouterLink
-            class="hover:underline hover:text-gray-50 transition-colors"
-            to="/About" @click="openNav">About</RouterLink>
+            <RouterLink class="hover:underline hover:text-gray-50 transition-colors" to="/About" @click="openNav">About
+            </RouterLink>
           </li>
           <li>
-            <RouterLink
-            class="hover:underline hover:text-gray-50 transition-colors"
-            to="/Work" @click="openNav">Work</RouterLink>
+            <RouterLink class="hover:underline hover:text-gray-50 transition-colors" to="/Work" @click="openNav">Work
+            </RouterLink>
           </li>
           <li>
-            <RouterLink
-            class="hover:underline hover:text-gray-50 transition-colors"
-            to="/Services" @click="openNav">Services</RouterLink>
+            <RouterLink class="hover:underline hover:text-gray-50 transition-colors" to="/Services" @click="openNav">
+              Services</RouterLink>
           </li>
           <li>
-            <RouterLink
-            class="hover:underline hover:text-gray-50 transition-colors"
-            to="/Contact" @click="openNav">Contact</RouterLink>
+            <RouterLink class="hover:underline hover:text-gray-50 transition-colors" to="/Contact" @click="openNav">
+              Contact</RouterLink>
           </li>
         </ul>
       </div>
@@ -197,6 +181,31 @@ export default {
       this.$refs.slideOut.classList.toggle('openSlide');
       document.querySelector('.main-content').classList.toggle('open');
     }
+  },
+  mounted () {
+    // video check (safari, iphone)
+    var video = document.querySelector("#myVideo");
+    video.controls = false;
+    
+    if (!video) {
+      video = document.createElement('video');
+      video.src = './public/video/impennata2.MP4';
+      video.loop = true;
+      video.addEventListener('playing', paintVideo);
+      console.log("not work");
+    }
+    else if (video == null || video == ErrorEvent) {
+      /* second check */
+      var bgvideo = document.getElementById("video");
+      bgvideo.muted = true;
+      bgvideo.loop = true;
+      bgvideo.playsinline = true;
+      bgvideo.play();
+    }
+    else console.log("works.")
+    //nothing, it works.
+
+    video.play();
   }
 }
 </script>
