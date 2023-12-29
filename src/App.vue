@@ -8,6 +8,7 @@
       <video src="/video/video_sito_compressed.mp4" id="myVideo" autoplay="true" loop="true" muted="muted"
         playsinline="playsinline"> <!--autoplay-->
       </video>
+      <div class="bg-hero"></div>
       <!-- (fake) navigation -->
       <div
         class="w-full sticky top-0 left-0 right-0 z-[999] max-h-20 min-h-[40px] h-full bg-accent border-2 border-accent outline-2 outline-accent p-0">

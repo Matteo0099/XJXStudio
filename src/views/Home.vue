@@ -1,5 +1,5 @@
 <template>
-  <div class="container flex mt-6 justify-center flex-col mx-auto">
+  <div class="container w-full h-screen flex mt-6 justify-center flex-col mx-auto">
     <div class="content max-w-4xl mx-auto">
       <h1 class="font-black text-2xl sm:text-3xl mb-3 uppercase">Last Video</h1>
       <p class="font-regular text-lg max-w-3xl my-4">

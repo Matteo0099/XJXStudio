@@ -123,8 +123,16 @@
   .main-content {
     height: 100%;
     /** main colors **/
-    background: #202321;
+    z-index: 2;
+    background: #000;
     color: #fefefe;
+  }
+
+  .bg-hero {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1;
   }
 
   .main-content.open {
@@ -291,10 +299,10 @@
     position: absolute;
     top: 33%;
     left: 0;
-    background: rgba(0, 0, 0, 0.5);
     color: #f1f1f1;
     width: 100%;
     padding: 20px;
+    z-index: 9;
   }
 
   @media screen and (min-width: 967px) {
