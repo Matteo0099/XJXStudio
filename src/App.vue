@@ -180,6 +180,7 @@ export default {
       this.$refs.listNav.classList.toggle('fullOpen');
       this.$refs.navList.classList.toggle('open');
       this.$refs.slideOut.classList.toggle('openSlide');
+      document.querySelector('body').classList.toggle('overflow-hidden');
       document.querySelector('.main-content').classList.toggle('open');
     }
   },
