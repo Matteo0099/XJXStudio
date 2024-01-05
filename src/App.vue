@@ -1,4 +1,5 @@
 <script setup>
+  import Foot from './components/Footer.vue';
 </script>
 
 <template>
@@ -11,10 +12,10 @@
       <div class="bg-hero"></div>
       <!-- (fake) navigation -->
       <div
-        class="w-full sticky top-0 left-0 right-0 z-[999] max-h-20 min-h-[40px] h-full bg-accent border-2 border-accent outline-2 outline-accent p-0">
+        class="w-full sticky top-0 left-0 right-0 z-[999] max-h-20 min-h-[40px] h-full bg-accent p-0">
         <nav class="fakeNav py-1.5 flex justify-start items-center">
           <div class="social-wrap flex ml-5 gap-3 text-sm">
-            <a href="" target="_blank">
+            <a href="https://www.instagram.com/xjxvisuals/" target="_blank">
               <svg xmlns="http://www.w3.org/2000/svg"
                 class="icon icon-tabler hover:opacity-70 icon-tabler-brand-instagram" width="18" height="18"
                 viewBox="0 0 24 24" stroke-width="1.9" stroke="#fefefe" fill="none" stroke-linecap="round"
@@ -164,6 +165,8 @@
         </a>
       </div>
     </div>
+    <!-- FOOTER -->
+    <Foot></Foot>
     <div class="slide-out" ref="slideOut"></div>
   </div>
 </template>
@@ -206,7 +209,6 @@ export default {
     }
     else console.log("works.")
     //nothing, it works.
-
     video.play();
   }
 }

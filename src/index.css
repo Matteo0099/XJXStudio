@@ -34,6 +34,10 @@
     background: #da2228 !important;
   }
 
+  .bg-normal {
+    background: #000;
+  }
+
   .border-accent {
     border-color: #da2228;
   }
@@ -131,7 +135,7 @@
   .bg-hero {
     position: absolute;
     inset: 0;
-    background: rgba(0, 0, 0, 0.715);
+    background: rgba(0, 0, 0, 0.6);
     z-index: 1;
   }
 
@@ -148,12 +152,12 @@
     overflow: hidden;
   }
 
-  .main-content.open > * {
+  /* .main-content.open > * {
     -webkit-transform: scale(1.007)!important;
     transform: scale(1.007)!important;
     -webkit-transform-origin: center;
     transform-origin: center;
-  }
+  } */
 
   @media only screen and (min-width: 1000px) {
     .main-content.open {
@@ -205,7 +209,6 @@
     animation: scroll var(--time) linear infinite;
     -webkit-animation-delay: calc(var(--time)*-1);
     animation-delay: calc(var(--time)*-1);
-
   }
 
   .scroll div:nth-child(2) {
@@ -308,7 +311,11 @@
     bottom: 0;
     min-width: 100%; 
     min-height: 100%;
+    width: 100% !important;
     object-fit: cover;
+    margin: 0;
+    padding: 0;
+    border: 2px solid #da2228;
   }
   
   .content {
@@ -328,12 +335,18 @@
   }
   
   #myBtn {
-    width: 177px;
+    min-width: 200px;
     border: none;
     background: #da2228;
     color: #fefefe;
     cursor: pointer;
     transition: transform 500ms ease;
+  }
+
+  @media screen and (max-width: 676px) {
+    #myBtn {
+      width: 150px;
+    }
   }
   
   #myBtn:hover {
