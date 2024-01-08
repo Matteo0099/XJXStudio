@@ -46,6 +46,23 @@
     outline-color: #da2228;
   }
 
+  .bg-sfuma {
+    background: rgba(0, 0, 0, 0.75);
+  }
+
+  @media screen and (min-width: 767px) {
+    .title1, .title2, .title3, .title4 {
+      display: none;
+    }
+  
+    .one:hover .title1, 
+    .two:hover .title2, 
+    .three:hover .title3, 
+    .four:hover .title4 {
+      display: block !important;
+    }
+  }
+
   .nav-list.open {
     position: fixed;
     display: -webkit-box;

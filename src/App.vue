@@ -1,5 +1,5 @@
 <script setup>
-  import Foot from './components/Footer.vue';
+import Foot from './components/Footer.vue';
 </script>
 
 <template>
@@ -11,8 +11,7 @@
       </video>
       <div class="bg-hero"></div>
       <!-- (fake) navigation -->
-      <div
-        class="w-full sticky top-0 left-0 right-0 z-[999] max-h-20 min-h-[40px] h-full bg-accent p-0">
+      <div class="w-full sticky top-0 left-0 right-0 z-[999] max-h-20 min-h-[40px] h-full bg-accent p-0">
         <nav class="fakeNav py-1.5 flex justify-start items-center">
           <div class="social-wrap flex ml-5 gap-3 text-sm">
             <a href="https://www.instagram.com/xjxvisuals/" target="_blank">
@@ -187,11 +186,11 @@ export default {
       document.querySelector('.main-content').classList.toggle('open');
     }
   },
-  mounted () {
+  mounted() {
     // video check (safari, iphone)
     var video = document.querySelector("#myVideo");
     video.controls = false;
-    
+
     if (!video) {
       video = document.createElement('video');
       video.src = './public/video/impennata2.MP4';
