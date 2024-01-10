@@ -90,9 +90,10 @@ import Foot from './components/Footer.vue';
     </main>
     <!-- list of the navigation -->
     <div class="nav-list" ref="navList">
+      <!-- hamburger 2 (x) -->
       <div class="close-open hidden cursor-pointer" @click="openNav">
         <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-x" width="32" height="32"
-          viewBox="0 0 24 24" stroke-width="1.5" stroke="#2c3e50" fill="none" stroke-linecap="round"
+          viewBox="0 0 24 24" stroke-width="1.5" stroke="#000" fill="none" stroke-linecap="round"
           stroke-linejoin="round">
           <path stroke="none" d="M0 0h24v24H0z" fill="none" />
           <path d="M18 6l-12 12" />

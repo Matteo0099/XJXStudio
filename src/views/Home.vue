@@ -279,7 +279,7 @@ import { RouterLink } from 'vue-router';
           <!-- CONTACT -->
           <div class="container mx-auto mt-48 mb-24">
             <h1 class="text-neutral-100 text-2xl sm:text-3xl font-black">GET IN TOUCH!</h1>
-            <div class="flex justify-between items-center mt-8 w-full max-w-[290px] mb-16">
+            <div class="flex justify-between items-center flex-wrap sm:flex-nowrap mt-8 w-full max-w-[290px] mb-16">
               <a href="mailto:">
                 <button id="myBtn" class="py-4 min-w-full flex justify-center items-center gap-2 font-black uppercase">
                   email
@@ -298,7 +298,7 @@ import { RouterLink } from 'vue-router';
               </a>
               <a href="tel:+39" itemscope itemtype="http://schema.org/LocalBusiness">
                 <button id="myBtn" itemprop="telephone"
-                  class="ml-4 py-4 min-w-full flex justify-center items-center gap-2 font-black uppercase">
+                  class="sm:ml-4 mt-4 sm:mt-0 py-4 min-w-full flex justify-center items-center gap-2 font-black uppercase w-[115%]">
                   phone number
                   <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-device-mobile-message"
                     width="28" height="28" viewBox="0 0 24 24" stroke-width="1.5" stroke="#2c3e50" fill="none"

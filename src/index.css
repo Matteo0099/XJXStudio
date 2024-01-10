@@ -8,6 +8,7 @@
     color: #fefefe;
     background: #000;
     text-wrap: balance !important;
+    text-size-adjust: 100%;
   }
 
   video::webkit-media-controls-volume-slider,
@@ -122,9 +123,11 @@
 
   .inner-wrap ul li a {
     color: #000;
-    font-weight: 700;
+    font-weight: 1000 !important;
     font-style: italic;
     text-transform: uppercase;
+    text-size-adjust: 100%;
+    font-stretch: extra-expanded;
   }
 
   #app {
@@ -362,7 +365,7 @@
 
   @media screen and (max-width: 676px) {
     #myBtn {
-      width: 150px;
+      min-width: 150px;
     }
   }
   

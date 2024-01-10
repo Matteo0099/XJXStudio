@@ -27,7 +27,7 @@
           </svg>
         </div>
         <h1 class="font-black mt-4 text-lg sm:text-xl">Premium</h1>
-        <p>550$</p>
+        <p>550$ <span class="text-xs sm:text-sm text-neutral-200 font-thin">(start price)</span></p>
 
         <ul class="mt-4 pl-4 list-disc">
           <li>shooting photo</li>
@@ -56,7 +56,7 @@
           </svg>
         </div>
         <h1 class="font-black mt-4 text-lg sm:text-xl">Interprise</h1>
-        <p>350$</p>
+        <p>350$ <span class="text-xs sm:text-sm text-neutral-200 font-thin">(start price)</span></p>
 
         <ul class="mt-4 pl-4 list-disc">
           <li>shooting photo</li>
@@ -79,7 +79,7 @@
           </svg>
         </div>
         <h1 class="font-black mt-4 text-lg sm:text-xl">Base</h1>
-        <p>200$</p>
+        <p>200$ <span class="text-xs sm:text-sm text-neutral-200 font-thin">(start price)</span></p>
 
         <ul class="mt-4 pl-4 list-disc">
           <li>shooting photo</li>
