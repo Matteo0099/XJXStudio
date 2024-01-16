@@ -1,9 +1,24 @@
 <script setup>
 import Foot from './components/Footer.vue';
+import { VuePreloader } from 'vue-preloader';
+import '../node_modules/vue-preloader/dist/style.css'
+import { ref } from 'vue';
+const showAnimation = ref(true);
 </script>
 
 <template>
   <div id="app" class="overflow-x-hidden">
+    <!-- preloader -->
+    <VuePreloader class="z-[999] absolute inset-0 m-auto" background-color="#091a28" color="#ffffff" transition-type="fade-up" :loading-speed="25"
+      :transition-speed="1500" @loading-is-over="showAnimation = false" @transition-is-over="transitionIsOver">
+      <template v-slot="{ percent, color }">
+        <transition name="loading-animation" mode="in-out">
+          <span v-if="showAnimation" :style="{ color }">
+            {{ percent }}
+          </span>
+        </transition>
+      </template>
+    </VuePreloader>
     <!-- main page -->
     <main class="main-content min-h-screen">
       <video src="/video/video_sito_compressed.mp4" id="myVideo" autoplay="true" loop="true" muted="muted"
@@ -11,7 +26,7 @@ import Foot from './components/Footer.vue';
       </video>
       <div class="bg-hero"></div>
       <!-- (fake) navigation -->
-      <div class="w-full sticky top-0 left-0 right-0 z-[999] max-h-20 min-h-[40px] h-full bg-accent p-0">
+      <div class="w-full sticky top-0 left-0 right-0 z-[99] max-h-20 min-h-[40px] h-full bg-accent p-0">
         <nav class="fakeNav py-1.5 flex justify-start items-center">
           <div class="social-wrap flex ml-5 gap-3 text-sm">
             <a href="https://www.instagram.com/xjxvisuals/" target="_blank">
@@ -62,7 +77,7 @@ import Foot from './components/Footer.vue';
         </nav>
       </div>
       <!-- TRUE NAV -->
-      <div class="w-full mx-auto sticky z-[999]">
+      <div class="w-full mx-auto sticky z-[99]">
         <nav class="flex justify-between z-[999] items-center pt-4 w-full mx-auto">
           <div class="ml-1 sm:ml-6">
             <RouterLink to="/" class="flex justify-center items-center gap-4 font-mono text-2xl" alt="logo">
