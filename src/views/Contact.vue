@@ -20,7 +20,7 @@
               <div class="h-full pr-6">
                 <ul class="mb-6 md:mb-0">
                   <li class="flex">
-                    <div class="flex h-10 w-10 items-center justify-center rounded bg-blue-900 text-gray-50">
+                    <div class="flex h-10 w-10 items-center justify-center rounded bg-neutral-700 text-gray-50">
                       <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
                         stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
                         class="h-6 w-6">
@@ -37,7 +37,7 @@
                     </div>
                   </li>
                   <li class="flex">
-                    <div class="flex h-10 w-10 items-center justify-center rounded bg-blue-900 text-gray-50">
+                    <div class="flex h-10 w-10 items-center justify-center rounded bg-neutral-700 text-gray-50">
                       <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
                         stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
                         class="h-6 w-6">
@@ -56,7 +56,7 @@
                     </div>
                   </li>
                   <li class="flex">
-                    <div class="flex h-10 w-10 items-center justify-center rounded bg-blue-900 text-gray-50">
+                    <div class="flex h-10 w-10 items-center justify-center rounded bg-neutral-700 text-gray-50">
                       <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
                         stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
                         class="h-6 w-6">

@@ -7,20 +7,20 @@ const showAnimation = ref(true);
 </script>
 
 <template>
-  <div id="app" class="overflow-x-hidden">
+  <div id="app" class="overflow-x-hidden font-nunito">
     <!-- preloader -->
-    <VuePreloader class="z-[999] absolute inset-0 m-auto" background-color="#091a28" color="#ffffff" transition-type="fade-up" :loading-speed="25"
-      :transition-speed="1500" @loading-is-over="showAnimation = false" @transition-is-over="transitionIsOver">
+    <VuePreloader class="z-[999] absolute inset-0 m-auto" background-color="#000" color="#ffffff" transition-type="fade-up" :loading-speed="25"
+      :transition-speed="1400" @loading-is-over="showAnimation = false" @transition-is-over="transitionIsOver">
       <template v-slot="{ percent, color }">
         <transition name="loading-animation" mode="in-out">
-          <span v-if="showAnimation" :style="{ color }">
-            {{ percent }}
+          <span v-if="showAnimation" :style="{ color }" class="text-xl sm:text-2xl xl:text-3xl font-mono font-black">
+            {{ percent }} %
           </span>
         </transition>
       </template>
     </VuePreloader>
     <!-- main page -->
-    <main class="main-content min-h-screen">
+    <main class="main-content min-h-screen font-nunito">
       <video src="/video/video_sito_compressed.mp4" id="myVideo" autoplay="true" loop="true" muted="muted"
         playsinline="playsinline"> <!--autoplay-->
       </video>
@@ -104,7 +104,7 @@ const showAnimation = ref(true);
       </router-view>
     </main>
     <!-- list of the navigation -->
-    <div class="nav-list" ref="navList">
+    <div class="nav-list font-nunito" ref="navList">
       <!-- hamburger 2 (x) -->
       <div class="close-open hidden cursor-pointer" @click="openNav">
         <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-x" width="32" height="32"
@@ -188,9 +188,6 @@ const showAnimation = ref(true);
 
 <script>
 export default {
-  data() {
-    return
-  },
   methods: {
     openNav() {
       this.$refs.listNav.classList.toggle('openDisplay');

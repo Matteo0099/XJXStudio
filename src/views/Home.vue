@@ -145,7 +145,7 @@ import { RouterLink } from 'vue-router';
             <h1 class="text-neutral-100 text-2xl sm:text-3xl font-black">
               MY SERVICES*
             </h1>
-            <p class="text-md sm:text-lg xl:text-2xl w-full font-sans mt-4 mb-20 font-light">
+            <p class="text-md sm:text-lg xl:text-2xl w-full font-nunito mt-4 mb-20 font-light">
               *I offer generally <strong class="underline">3 types of plan</strong>: base, interprise and premium:
               <strong class="underline">It depends a lot</strong> on what the customer requires.
               The work and consequently can vary greatly from the type of video making request.
