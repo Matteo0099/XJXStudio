@@ -72,7 +72,7 @@ const showAnimation = ref(true);
             </a>
           </div>
           <div class="message w-[80%] text-center">
-            <h1>PLEASE NOTE: i'm not avaible from 23 december to 7 january!</h1>
+            <h1>PLEASE NOTE: some periods of the year i'm not avaible!</h1>
           </div>
         </nav>
       </div>
@@ -182,6 +182,7 @@ const showAnimation = ref(true);
     </div>
     <!-- FOOTER -->
     <Foot></Foot>
+    <!-- loader -->
     <div class="slide-out" ref="slideOut"></div>
   </div>
 </template>
@@ -200,7 +201,7 @@ export default {
     }
   },
   mounted() {
-    // video check (safari, iphone)
+    // video check (safari, iphone, EDGE EI7+)
     var video = document.querySelector("#myVideo");
     video.controls = false;
 
