@@ -9,13 +9,19 @@
       </div>
       <div class="flex w-full px-4 mt-8 sm:m-0 sm:p-0 sm:w-1/2 flex-col justify-center items-start">
         <h1 class="font-bold text-2xl sm:text-3xl mb-4">Francesco Versace</h1>
-        <p>I'm 19 y.o. video-maker that put passion and love in whatever i do!</p>
-        <p>
-          My services are carried out in a professional manner, with particular attention to the
-          customer and with high-level equipment. I edit videos with Premiere Pro,
-          a program from the Adobe suite
+        <p class="font-thin text-sm md:text-md sm:pr-2">
+          Mi chiamo Francesco, sono un giovane videomaker classe 2004 che abita in italia, piú precisamente in Friuli Venezia Giulia.
+          mi sono avvicinato a questo mondo in modo concreto attorno al 2020 dopo essermene appassionato già da piú piccolino attorno al 2018/19, 
+          grazie al mondo dei motori e del writing guardando documentari e trasmissioni tv.
         </p>
-        <p>Feel free to contact me for a video service.</p>
+        <p class="font-thin text-sm md:text-md sm:pr-2 pt-2">
+          Il mondo multimediale in generale é una passione che coltivo specialmente il fascino delle digital art come poster e cover art.
+          parlando di esperienze ho avuto la fortuna tramite la scuola di conoscere un ragazzo che è stato di molta ispirazione nel mio percorso dandomi speranza,consigli e skills di chi questo lavoro lo fa da molti piú anni, finita la scuola ho iniziato a lavorare in un distributore di benzina per comprarmi tutta l'attrezzatura di cui avessi bisogno .
+        </p>
+        <p class="font-thin text-sm md:text-md sm:pr-2 pt-2">
+          Fatti i primi lavori e i primi clienti,  mi dedico per la maggior parte del tempo a lavori riguardanti il mondo sportivo in particolar modo quello del motocross/moto stunt.
+          Tramite i miei video voglio trasmettere emozioni ed energia mettendo passione e semplicitá
+        </p>
         <!-- buttons -->
         <div class="w-full max-w-[365px] mt-8">
           <a href="mailto:" class="w-full">
