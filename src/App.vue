@@ -9,7 +9,7 @@ const showAnimation = ref(true);
 <template>
   <div id="app" class="overflow-x-hidden font-nunito">
     <!-- preloader -->
-    <VuePreloader class="z-[999] absolute inset-0 m-auto" background-color="#000" color="#ffffff" transition-type="fade-up" :loading-speed="25"
+    <VuePreloader class="z-[999] fixed inset-0 m-auto" background-color="#000" color="#ffffff" transition-type="fade-up" :loading-speed="25"
       :transition-speed="1400" @loading-is-over="showAnimation = false" @transition-is-over="transitionIsOver">
       <template v-slot="{ percent, color }">
         <transition name="loading-animation" mode="in-out">
