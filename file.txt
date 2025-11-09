@@ -1,0 +1,32 @@
+COLORI: 
+sfondo bianco
+testo nero
+dettagli rossi (freccie, frecciette, righe HAMBURGER TENDA)
+
+HERO PAGE:
+via lo slider in basso e mettere una freccia in basso "V" rovesciata
+XJXstudios --> XJXvisual 
+logo da cambiare foto + allargare
+via last video 
+via la patina nera
+via la cornice rossa
+
+NAVIGATION: 
+quando apro la navbar più piccola la sezione della navbar (40%)
+barra bianca sopra navigazione
+link WORK --> fare id: che porta alla sezione work sotto la pagina principale.
+
+BODY ( OUR PRODUCTIONS ):
+togliere le preview
+dividere le sezioni in 100vh per sezione
+sezioni differenti per tipo progetto: music video, brand commercial, events, automotive, film.
+progetti: carosello che gira
+
+ABOUT ME --> ABOUT US: togliere, e farlo solo da link nella navigazione in una pagine a sè.
+
+MY SERVICES(minimal) : togliere prezzi e: --> SOLO MODULO VIA MAIL (nome,cognome,iltuotelefono,latuamail,richiesta ovvero messaggio)
+
+FOOTER: 3 parti: contatti a sx, logo centro e altri contatti a dx
+con sotto le icone social. 
+
+CONTATTI: MAIL, WHATSAPP, SOCIALS.
