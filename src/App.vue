@@ -1,15 +1,15 @@
 <script setup>
 import Foot from './components/Footer.vue';
-import { VuePreloader } from 'vue-preloader';
+// import { VuePreloader } from 'vue-preloader';
 import '../node_modules/vue-preloader/dist/style.css'
-import { ref } from 'vue';
-const showAnimation = ref(true);
+// import { ref } from 'vue';
+// const showAnimation = ref(true);
 </script>
 
 <template>
   <div id="app" class="overflow-x-hidden font-nunito">
     <!-- preloader -->
-    <VuePreloader class="z-[999] fixed inset-0 m-auto" background-color="#000" color="#ffffff" transition-type="fade-up" :loading-speed="25"
+    <!-- <VuePreloader class="z-[999] fixed inset-0 m-auto" background-color="#000" color="#ffffff" transition-type="fade-up" :loading-speed="25"
       :transition-speed="1400" @loading-is-over="showAnimation = false" @transition-is-over="transitionIsOver">
       <template v-slot="{ percent, color }">
         <transition name="loading-animation" mode="in-out">
@@ -18,7 +18,7 @@ const showAnimation = ref(true);
           </span>
         </transition>
       </template>
-    </VuePreloader>
+    </VuePreloader> -->
     <!-- main page -->
     <main class="main-content min-h-screen font-nunito">
       <video src="/video/video_sito_compressed.mp4" id="myVideo" autoplay="true" loop="true" muted="muted"
