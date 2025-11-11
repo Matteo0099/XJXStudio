@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "@vercel/analytics": "^1.1.1",
+    "swiper": "^12.0.3",
     "vue": "^3.3.8",
     "vue-preloader": "^1.1.4",
     "vue-router": "^4.2.5"

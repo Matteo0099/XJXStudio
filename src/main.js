@@ -6,6 +6,39 @@ import './style/font.css';
 import './style/reset.css';
 import './index.css';
 
+
+import Swiper from 'swiper';
+import { Navigation, Pagination } from 'swiper/modules';
+// import Swiper and modules styles
+import 'swiper/css';
+import 'swiper/css/navigation';
+import 'swiper/css/pagination';
+
+// init Swiper:
+const swiper = new Swiper('.swiper', {
+  // Optional parameters
+  direction: 'vertical',
+  loop: true,
+
+  // If we need pagination
+  pagination: {
+    el: '.swiper-pagination',
+  },
+
+  // Navigation arrows
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+  },
+
+  // And if we need scrollbar
+  scrollbar: {
+    el: '.swiper-scrollbar',
+  },
+});
+
+
+
 // vercel stats
 import { inject } from '@vercel/analytics';
 inject();
@@ -31,3 +64,4 @@ const routes = [
 const router = createRouter({ history: createWebHistory(), routes })
 
 createApp(App).use(router).mount('#app')
+App.use(swiper)
