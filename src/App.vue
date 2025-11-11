@@ -1,7 +1,7 @@
 <script setup>
 import Foot from './components/Footer.vue';
 // import { VuePreloader } from 'vue-preloader';
-import '../node_modules/vue-preloader/dist/style.css'
+// import '../node_modules/vue-preloader/dist/style.css'
 // import { ref } from 'vue';
 // const showAnimation = ref(true);
 </script>
@@ -183,7 +183,7 @@ import '../node_modules/vue-preloader/dist/style.css'
     <!-- FOOTER -->
     <Foot></Foot>
     <!-- loader -->
-    <div class="slide-out" ref="slideOut"></div>
+    <!-- <div class="slide-out" ref="slideOut"></div> -->
   </div>
 </template>
 
@@ -220,8 +220,7 @@ export default {
       bgvideo.playsinline = true;
       bgvideo.play();
     }
-    else console.log("works.")
-    //nothing, it works.
+    else console.log("works.") //nothing, it works.
     video.play();
   }
 }

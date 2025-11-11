@@ -1,6 +1,6 @@
 FONT:
 TITOLI: IMPACT
-SOTTO-TITOLI-PARAGRAFI: NUNITO-SANS (C'è GIà)
+SOTTO-TITOLI-PARAGRAFI: NUNITO-SANS (C'è Già)
 
 COLORI: 
 sfondo bianco
@@ -33,4 +33,9 @@ MY SERVICES(minimal) : togliere prezzi e: --> SOLO MODULO VIA MAIL (nome,cognome
 FOOTER: 3 parti: contatti a sx, logo centro e altri contatti a dx
 con sotto le icone social. 
 
-CONTATTI: MAIL, WHATSAPP, SOCIALS.
+CONTATTI: MAIL, WHATSAPP, SOCIALS:
+mail: xjxvisuals@gmail.com               
+cell: +39 3921141013                             
+PIVA: 01284720313
+instagram: xjxstudios
+facebook: xjxstudios

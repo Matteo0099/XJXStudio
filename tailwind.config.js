@@ -3,7 +3,10 @@ module.exports = {
   darkMode: false, // or 'media' or 'class'
   theme: {
     extend: {
-      fontFamily: {'nunito': ['"Nunito Sans"', 'sans-serif']}
+      fontFamily: {
+        'nunito': ['"Nunito Sans"', 'sans-serif'],
+        'impact': ['"Impact"', 'sans-serif']
+      }
     }
   },
   variants: { extend: {} },
