@@ -1,5 +1,35 @@
 <script setup>
-import { RouterLink } from 'vue-router';
+import { ref, computed } from 'vue';
+// Swiper Vue.js components
+import { Swiper, SwiperSlide } from 'swiper/vue';
+
+// Swiper core styles
+import 'swiper/css';
+import 'swiper/css/free-mode';
+import 'swiper/css/navigation';
+import 'swiper/css/thumbs';
+
+// modules
+import { FreeMode, Navigation, Thumbs } from 'swiper/modules';
+
+/* --- reactive refs --- */
+const thumbsSwiper = ref(null);
+const mainSwiper = ref(null);
+const currentIndex = ref(0)
+const thumbs = computed(() => ({ swiper: thumbsSwiper.value }));
+
+const setThumbsSwiper = (swiper) => {
+  thumbsSwiper.value = swiper;
+};
+
+const setMainSwiper = (swiper) => {
+  mainSwiper.value = swiper;
+  currentIndex.value = swiper?.activeIndex ?? 0;
+};
+
+const onSlideChange = (swiper) => {
+  currentIndex.value = swiper.activeIndex;
+};
 </script>
 
 <template>
@@ -82,20 +112,65 @@ import { RouterLink } from 'vue-router';
       </div>
 
       <!-- content of all the home -->
-      <div class="container sticky w-full max-w-4xl px-4 mt-24 mx-auto flex flex-col justify-center items-center">
+      <div class="container min-h-full sticky w-full max-w-4xl px-4 mt-24 mx-auto flex flex-col justify-center items-center">
         <div class="relative min-h-screen w-full" id="down"> <!--scroll down THERE-->
           <!-- LITTLE PREVIEW OF WORKS -->
           <h1 class="text-2xl sm:text-3xl font-black">
             PREVIOUS PRODUCTIONS:
           </h1>
-          <!-- Slider main container -->
-          <swiper :navigation="true" :modules="modules" class="mySwiper">
-            <swiper-slide>Slide 1</swiper-slide>
-            <swiper-slide>Slide 2</swiper-slide><swiper-slide>Slide 3</swiper-slide>
-            <swiper-slide>Slide 4</swiper-slide><swiper-slide>Slide 5</swiper-slide>
-            <swiper-slide>Slide 6</swiper-slide><swiper-slide>Slide 7</swiper-slide>
-            <swiper-slide>Slide 8</swiper-slide><swiper-slide>Slide 9</swiper-slide>
-          </swiper>
+          <!-- MAIN SWIPER -->
+          <Swiper :modules="[FreeMode, Navigation, Thumbs]" :spaceBetween="5" :navigation="true" :thumbs="thumbs"
+            class="mySwiper2" @swiper="setMainSwiper" @slideChange="onSlideChange">
+            <SwiperSlide><iframe title="vimeo-player" src="https://player.vimeo.com/video/1092841778?h=9c116489cb"
+                width="650" height="545" class="iframe-sw" frameborder="0"
+                referrerpolicy="strict-origin-when-cross-origin"
+                allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share"
+                allowfullscreen alt="1"></iframe></SwiperSlide>
+            <SwiperSlide><iframe title="vimeo-player" src="https://player.vimeo.com/video/1099415862?h=a96f8bcc38"
+                width="650" height="545" class="iframe-sw" frameborder="0"
+                referrerpolicy="strict-origin-when-cross-origin"
+                allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share"
+                allowfullscreen alt="2"></iframe></SwiperSlide>
+            <SwiperSlide><iframe title="vimeo-player" src="https://player.vimeo.com/video/1068568004?h=497c4dbaa1"
+                width="650" height="545" class="iframe-sw" frameborder="0"
+                referrerpolicy="strict-origin-when-cross-origin"
+                allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share"
+                allowfullscreen alt="3"></iframe></SwiperSlide>
+            <SwiperSlide><iframe title="vimeo-player" src="https://player.vimeo.com/video/1084361085?h=7f247a0b7e"
+                width="650" height="545" class="iframe-sw" frameborder="0"
+                referrerpolicy="strict-origin-when-cross-origin"
+                allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share"
+                allowfullscreen alt="4"></iframe></SwiperSlide>
+            <SwiperSlide><iframe title="vimeo-player" src="https://player.vimeo.com/video/1075833312?h=4332fba3ee"
+                width="650" height="550" class="iframe-sw" frameborder="0"
+                referrerpolicy="strict-origin-when-cross-origin"
+                allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share"
+                allowfullscreen alt="5"></iframe></SwiperSlide>
+            <SwiperSlide><iframe title="vimeo-player" src="https://player.vimeo.com/video/1130581740?h=6117c62f30"
+                width="650" height="545" class="iframe-sw" frameborder="0"
+                referrerpolicy="strict-origin-when-cross-origin"
+                allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share"
+                allowfullscreen alt="6"></iframe></SwiperSlide>
+            <SwiperSlide><iframe title="vimeo-player" src="https://player.vimeo.com/video/1130582373?h=f2cbf7688e"
+                width="650" height="545" class="iframe-sw" frameborder="0"
+                referrerpolicy="strict-origin-when-cross-origin"
+                allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share"
+                allowfullscreen alt="7"></iframe></SwiperSlide>
+            <!-- altre slide... -->
+          </Swiper>
+
+          <!-- THUMBNAILS SWIPER -->
+          <Swiper :modules="[FreeMode, Navigation, Thumbs]" :spaceBetween="5" :slidesPerView="4" :freeMode="true"
+            :watchSlidesProgress="true" class="mySwiper" @swiper="setThumbsSwiper">
+            <SwiperSlide><img src="/video/copertine_projects/1.jpeg" alt="t1" /></SwiperSlide>
+            <SwiperSlide><img src="/video/copertine_projects/2.jpeg" alt="t2" /></SwiperSlide>
+            <SwiperSlide><img src="/video/copertine_projects/3.jpeg" alt="t3" /></SwiperSlide>
+            <SwiperSlide><img src="/video/copertine_projects/4.jpeg" alt="t4" /></SwiperSlide>
+            <SwiperSlide><img src="/video/copertine_projects/5.jpeg" alt="t5" /></SwiperSlide>
+            <SwiperSlide><img src="/video/copertine_projects/6.jpeg" alt="t6" /></SwiperSlide>
+            <SwiperSlide><img src="/video/copertine_projects/7.jpeg" alt="t7" /></SwiperSlide>
+            <!-- altre miniatures... -->
+          </Swiper>
           <!-- 1 (2/4) -->
           <!-- <div class="card h-full gap-4 flex flex-wrap sm:flex-nowrap w-full">
             <div class="three p-1 w-full border-2 relative border-neutral-100 my-2 bg-neutral-900">
@@ -128,28 +203,65 @@ import { RouterLink } from 'vue-router';
           </div> -->
         </div>
 
-        <div class="relative min-h-screen w-full">
+        <div class="relative min-h-screen w-full flex items-center justify-center">
           <!-- SERVICES -->
-          <div class="container mx-auto mt-8 mb-24">
-            <h1 class=" text-2xl sm:text-3xl font-black">
+          <div class="container mx-auto mt-24 mb-3">
+            <h1 class=" text-2xl sm:text-3xl font-black mb-12">
               DO YOU WANT A PROJECT FOR YOU?
             </h1>
             <!-- EMAIL -->
-            <form ref="form">  <!--@submit.prevent="sendEmail"-->
-              <label>Name</label>
-              <input type="text" name="user_name">
-              <label>Email</label>
-              <input type="email" name="user_email">
-              <label>Message</label>
-              <textarea name="message"></textarea>
-              <input type="submit" value="Send">
+            <!-- EMAIL FORM STILIZZATO -->
+            <form ref="form" class="max-w-md mx-auto p-8 bg-white rounded-2xl shadow-lg space-y-6">
+              <h2 class="text-2xl font-semibold text-gray-800 text-center">Contattami</h2>
+
+              <!-- NAME -->
+              <div class="flex flex-col">
+                <label for="user_name" class="mb-1 text-gray-600 font-medium">Nome</label>
+                <input type="text" id="user_name" required name="user_name" placeholder="Il tuo nome"
+                  class="border border-gray-300 rounded-xl px-4 py-2 focus:ring-2 focus:ring-indigo-500 focus:outline-none transition duration-200">
+              </div>
+
+              <!-- SURNAME -->
+              <div class="flex flex-col">
+                <label for="user_surname" class="mb-1 text-gray-600 font-medium">Cognome</label>
+                <input type="text" id="user_surname" required name="user_surname" placeholder="Il tuo cognome"
+                  class="border border-gray-300 rounded-xl px-4 py-2 focus:ring-2 focus:ring-indigo-500 focus:outline-none transition duration-200">
+              </div>
+
+              <!-- EMAIL -->
+              <div class="flex flex-col">
+                <label for="user_email" class="mb-1 text-gray-600 font-medium">Email</label>
+                <input type="email" id="user_email" required name="user_email" placeholder="tu@email.com"
+                  class="border border-gray-300 rounded-xl px-4 py-2 focus:ring-2 focus:ring-indigo-500 focus:outline-none transition duration-200">
+              </div>
+
+              <!-- TELEFONO -->
+              <div class="flex flex-col">
+                <label for="user_number" class="mb-1 text-gray-600 font-medium">Telefono</label>
+                <input type="number" id="user_number" required name="user_number" placeholder="+1 2345..."
+                  class="border border-gray-300 rounded-xl px-4 py-2 focus:ring-2 focus:ring-indigo-500 focus:outline-none transition duration-200">
+              </div>
+
+              <!-- MESSAGE -->
+              <div class="flex flex-col">
+                <label for="message" class="mb-1 text-gray-600 font-medium">Messaggio</label>
+                <textarea id="message" required name="message" rows="5" placeholder="Scrivi il tuo messaggio..."
+                  class="border border-gray-300 rounded-xl px-4 py-2 focus:ring-2 focus:ring-indigo-500 focus:outline-none transition duration-200 resize-none"></textarea>
+              </div>
+
+              <!-- SUBMIT BUTTON -->
+              <div class="text-center">
+                <input type="submit" value="Invia"
+                  class="cursor-pointer bg-indigo-600 text-white font-semibold px-6 py-2 rounded-xl hover:bg-indigo-700 focus:ring-2 focus:ring-indigo-500 transition duration-200">
+              </div>
             </form>
+
           </div>
         </div>
 
-        <div class="relative min-h-screen w-full">
+        <div class="relative min-h-screen w-full flex items-center justify-center">
           <!-- CONTACT -->
-          <div class="container mx-auto mt-48 mb-24">
+          <div class="container mx-auto mt-2 mb-24">
             <h1 class=" text-2xl sm:text-3xl font-black">GET IN TOUCH!</h1>
             <div class="flex justify-between items-center flex-wrap sm:flex-nowrap mt-8 w-full max-w-[290px] mb-16">
               <a href="mailto:">
@@ -238,26 +350,24 @@ import { RouterLink } from 'vue-router';
 </template>
 
 <script>
-  // Import Swiper Vue.js components
-  import { Swiper, SwiperSlide } from 'swiper/vue';
+import emailjs from 'emailjs-com';
 
-  // Import Swiper styles
-  import 'swiper/css';
-
-  import 'swiper/css/navigation';
-
-  // import required modules
-  import { Navigation } from 'swiper/modules';
-
-  export default {
-    components: {
-      Swiper,
-      SwiperSlide,
+export default {
+  methods: {
+    sendEmail() {
+      emailjs
+        .sendForm('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', this.$refs.form, {
+          publicKey: 'YOUR_PUBLIC_KEY',
+        })
+        .then(
+          () => {
+            console.log('SUCCESS!');
+          },
+          (error) => {
+            console.log('FAILED...', error.text);
+          },
+        );
     },
-    setup() {
-      return {
-        modules: [Navigation],
-      };
-    },
-  };
+  },
+};
 </script>

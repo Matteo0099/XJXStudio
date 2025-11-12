@@ -314,33 +314,113 @@
 
 
   /**
-    swiper
+    swiper 
   **/
+  /**
+  SWIPER - LAYOUT COMPLETO
+**/
+
+  /* Contenitore principale dello swiper */
   .swiper {
     width: 100%;
-    height: calc(100vh - 20%);
+    height: 100%;
+    margin-left: auto;
+    margin-right: auto;
   }
 
+  /* Slide principale con rapporto fisso 16:9 */
   .swiper-slide {
-    text-align: center;
-    font-size: 18px;
-    background: #444;
+    position: relative;
     width: 100%;
-    height: 500px;
-    /* Center slide text vertically */
+    aspect-ratio: 16 / 9;
+    /* Tutte le slide stesso rapporto */
+    overflow: hidden;
+    background: #000;
+    background-size: cover;
+    background-position: center;
     display: flex;
     justify-content: center;
     align-items: center;
   }
 
-  .swiper-slide img {
-    display: block;
+  /* Contenuto dentro la slide: immagini o iframe video */
+  .swiper-slide iframe,
+  .swiper-slide img,
+  .swiper-slide video {
+    position: absolute;
+    top: 0;
+    left: 0;
     width: 100%;
-    height: calc(100vh - 20%);
+    height: 100%;
+    object-fit: cover;
+    /* Ritaglia per mantenere il rapporto */
+    border: none;
+    display: block;
+  }
+
+  iframe.iframe-sw {
+    margin: .4rem auto !important;
+  }
+
+  /* SWIPER PRINCIPALE (grande) */
+  .mySwiper2 {
+    height: auto;
+    /* Calcolato dal rapporto */
+    width: 100%;
+  }
+
+  /* SWIPER MINIATURE (thumbnails) */
+  .mySwiper {
+    height: 20%;
+    box-sizing: border-box;
+    padding: 10px 0;
+  }
+
+  /* Miniature: quadrate e uniformi */
+  .mySwiper .swiper-slide {
+    aspect-ratio: 1 / 1;
+    overflow: hidden;
+    opacity: 0.4;
+    border-radius: 10px;
+    transition: opacity 0.3s ease;
+    background: #000;
+  }
+
+  /* Miniatura attiva */
+  .mySwiper .swiper-slide-thumb-active {
+    opacity: 1;
+  }
+
+  /* Immagini miniature */
+  .mySwiper .swiper-slide img {
+    width: 100%;
+    height: 100%;
     object-fit: cover;
   }
 
+  /* Frecce di navigazione */
+  .swiper-button-next,
+  .swiper-button-prev {
+    color: var(--dettagli-red) !important;
+    text-rendering: auto;
+  }
 
+  /* Reset allineamenti verticali */
+  img,
+  svg,
+  video,
+  canvas,
+  audio,
+  iframe,
+  embed,
+  object {
+    vertical-align: bottom !important;
+  }
+
+
+
+
+  /* SCROLLER */
   .scroll {
     position: absolute;
     bottom: 1.5rem;
