@@ -1,35 +1,69 @@
 <script setup>
-import { ref, computed } from 'vue';
-// Swiper Vue.js components
-import { Swiper, SwiperSlide } from 'swiper/vue';
+import { ref, computed, onMounted } from 'vue'
+import emailjs from 'emailjs-com'
 
-// Swiper core styles
-import 'swiper/css';
-import 'swiper/css/free-mode';
-import 'swiper/css/navigation';
-import 'swiper/css/thumbs';
+// Swiper (resto del tuo codice invariato)
+import { Swiper, SwiperSlide } from 'swiper/vue'
+import 'swiper/css'
+import 'swiper/css/free-mode'
+import 'swiper/css/navigation'
+import 'swiper/css/thumbs'
+import { FreeMode, Navigation, Thumbs } from 'swiper/modules'
 
-// modules
-import { FreeMode, Navigation, Thumbs } from 'swiper/modules';
-
-/* --- reactive refs --- */
-const thumbsSwiper = ref(null);
-const mainSwiper = ref(null);
+const thumbsSwiper = ref(null)
+const mainSwiper = ref(null)
 const currentIndex = ref(0)
-const thumbs = computed(() => ({ swiper: thumbsSwiper.value }));
-
-const setThumbsSwiper = (swiper) => {
-  thumbsSwiper.value = swiper;
-};
-
+const thumbs = computed(() => ({ swiper: thumbsSwiper.value }))
+const setThumbsSwiper = (swiper) => (thumbsSwiper.value = swiper)
 const setMainSwiper = (swiper) => {
-  mainSwiper.value = swiper;
-  currentIndex.value = swiper?.activeIndex ?? 0;
-};
+  mainSwiper.value = swiper
+  currentIndex.value = swiper?.activeIndex ?? 0
+}
+const onSlideChange = (swiper) => (currentIndex.value = swiper.activeIndex)
 
-const onSlideChange = (swiper) => {
-  currentIndex.value = swiper.activeIndex;
-};
+
+const form = ref(null)
+const sending = ref(false)
+const sent = ref(false)
+
+const email = ref('')
+const title = ref('')
+const name = ref('')
+const time = ref('')
+const message = ref('')
+
+// ora corrente
+const setCurrentTime = () => {
+  const now = new Date();
+  time.value = now.toLocaleTimeString('it-IT');
+}
+
+onMounted(() => {
+  setCurrentTime();
+})
+
+const sendEmail = async () => {
+  setCurrentTime();
+  sending.value = true
+  sent.value = false
+
+  try {
+    await emailjs.sendForm(
+      'default_service', 
+      'template_n9vchzu',
+      form.value,
+      'RgtMFRhqJcSLACn-u'
+    )
+    sent.value = true
+    // resetta i campi dopo invio
+    email.value = title.value = name.value = time.value = message.value = ''
+  } catch (error) {
+    console.error('FAILED...', error)
+    alert('Errore durante l’invio ❌')
+  } finally {
+    sending.value = false
+  }
+}
 </script>
 
 <template>
@@ -206,56 +240,105 @@ const onSlideChange = (swiper) => {
         <div class="relative min-h-screen w-full flex items-center justify-center">
           <!-- SERVICES -->
           <div class="container mx-auto mt-24 mb-3">
-            <h1 class=" text-2xl sm:text-3xl font-black mb-12">
+            <h1 class="text-2xl sm:text-4xl md:text-5xl font-black w-fit mx-auto mb-12">
               DO YOU WANT A PROJECT FOR YOU?
             </h1>
-            <!-- EMAIL -->
-            <!-- EMAIL FORM STILIZZATO -->
-            <form ref="form" class="max-w-md mx-auto p-8 bg-white rounded-2xl shadow-lg space-y-6">
-              <h2 class="text-2xl font-semibold text-gray-800 text-center">Contattami</h2>
-
-              <!-- NAME -->
-              <div class="flex flex-col">
-                <label for="user_name" class="mb-1 text-gray-600 font-medium">Nome</label>
-                <input type="text" id="user_name" required name="user_name" placeholder="Il tuo nome"
-                  class="border border-gray-300 rounded-xl px-4 py-2 focus:ring-2 focus:ring-indigo-500 focus:outline-none transition duration-200">
+            <!-- EMAIL FORM -->
+            <form
+              id="form"
+              ref="form"
+              @submit.prevent="sendEmail"
+              class="mx-auto bg-white text-black p-8 rounded-2xl shadow-lg w-full max-w-[567px] space-y-5"
+            >
+              <div class="field flex flex-col">
+                <label for="email" class="font-semibold mb-1">Email</label>
+                <input
+                  type="email"
+                  name="email"
+                  id="email"
+                  v-model="email"
+                  required
+                  placeholder="mario.rossi@email.com"
+                  class="border border-neutral-400 rounded-lg p-2 focus:outline-none focus:ring-2 focus:ring-red-400"
+                />
               </div>
 
-              <!-- SURNAME -->
-              <div class="flex flex-col">
-                <label for="user_surname" class="mb-1 text-gray-600 font-medium">Cognome</label>
-                <input type="text" id="user_surname" required name="user_surname" placeholder="Il tuo cognome"
-                  class="border border-gray-300 rounded-xl px-4 py-2 focus:ring-2 focus:ring-indigo-500 focus:outline-none transition duration-200">
+              <div class="field flex flex-col">
+                <label for="title" class="font-semibold mb-1">Title</label>
+                <input
+                  type="text"
+                  name="title"
+                  id="title"
+                  v-model="title"
+                  required
+                  placeholder="Project title"
+                  class="border border-neutral-400 rounded-lg p-2 focus:outline-none focus:ring-2 focus:ring-red-400"
+                />
               </div>
 
-              <!-- EMAIL -->
-              <div class="flex flex-col">
-                <label for="user_email" class="mb-1 text-gray-600 font-medium">Email</label>
-                <input type="email" id="user_email" required name="user_email" placeholder="tu@email.com"
-                  class="border border-gray-300 rounded-xl px-4 py-2 focus:ring-2 focus:ring-indigo-500 focus:outline-none transition duration-200">
+              <div class="field flex flex-col">
+                <label for="name" class="font-semibold mb-1">Name</label>
+                <input
+                  type="text"
+                  name="name"
+                  id="name"
+                  v-model="name"
+                  required
+                  placeholder="Mario Rossi"
+                  class="border border-neutral-400 rounded-lg p-2 focus:outline-none focus:ring-2 focus:ring-red-400"
+                />
               </div>
 
-              <!-- TELEFONO -->
-              <div class="flex flex-col">
-                <label for="user_number" class="mb-1 text-gray-600 font-medium">Telefono</label>
-                <input type="number" id="user_number" required name="user_number" placeholder="+1 2345..."
-                  class="border border-gray-300 rounded-xl px-4 py-2 focus:ring-2 focus:ring-indigo-500 focus:outline-none transition duration-200">
+              <div class="field flex flex-col">
+                <label for="phone" class="font-semibold mb-1">Phone</label>
+                <input
+                  type="tel"
+                  name="phone"
+                  id="phone"
+                  v-model="phone"
+                  required
+                  placeholder="+39 333 1234567"
+                  class="border border-neutral-400 rounded-lg p-2 focus:outline-none focus:ring-2 focus:ring-red-400"
+                />
               </div>
 
-              <!-- MESSAGE -->
-              <div class="flex flex-col">
-                <label for="message" class="mb-1 text-gray-600 font-medium">Messaggio</label>
-                <textarea id="message" required name="message" rows="5" placeholder="Scrivi il tuo messaggio..."
-                  class="border border-gray-300 rounded-xl px-4 py-2 focus:ring-2 focus:ring-indigo-500 focus:outline-none transition duration-200 resize-none"></textarea>
+              <div class="field hidden">
+                <label for="time" class="font-semibold mb-1">Time</label>
+                <input
+                  type="text"
+                  name="time"
+                  id="time"
+                  v-model="time"
+                  readonly
+                  class="border border-neutral-400 rounded-lg p-2 bg-neutral-100 cursor-not-allowed text-neutral-600"
+                />
               </div>
 
-              <!-- SUBMIT BUTTON -->
-              <div class="text-center">
-                <input type="submit" value="Invia"
-                  class="cursor-pointer bg-indigo-600 text-white font-semibold px-6 py-2 rounded-xl hover:bg-indigo-700 focus:ring-2 focus:ring-indigo-500 transition duration-200">
+              <div class="field flex flex-col">
+                <label for="message" class="font-semibold mb-1">Message</label>
+                <input
+                  type="text"
+                  name="message"
+                  id="message"
+                  v-model="message"
+                  required
+                  placeholder="Tell us about your project..."
+                  class="border border-neutral-400 rounded-lg p-2 focus:outline-none focus:ring-2 focus:ring-red-400"
+                />
               </div>
+
+              <!-- Submit Button -->
+              <input
+                type="submit"
+                id="button"
+                :value="sending ? 'Sending...' : sent ? 'Sent ✅' : 'Send Email'"
+                :class="[
+                  'w-full py-3 text-lg font-bold rounded-lg transition duration-300 cursor-pointer',
+                  sending ? 'bg-red-400 text-white' : sent ? 'bg-green-500 text-white' : 'bg-red-600 text-white hover:bg-red-700'
+                ]"
+                :disabled="sending"
+              />
             </form>
-
           </div>
         </div>
 
@@ -348,26 +431,3 @@ const onSlideChange = (swiper) => {
     </div>
   </div>
 </template>
-
-<script>
-import emailjs from 'emailjs-com';
-
-export default {
-  methods: {
-    sendEmail() {
-      emailjs
-        .sendForm('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', this.$refs.form, {
-          publicKey: 'YOUR_PUBLIC_KEY',
-        })
-        .then(
-          () => {
-            console.log('SUCCESS!');
-          },
-          (error) => {
-            console.log('FAILED...', error.text);
-          },
-        );
-    },
-  },
-};
-</script>
