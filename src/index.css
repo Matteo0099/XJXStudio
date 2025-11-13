@@ -576,9 +576,8 @@
 
   #myBtn {
     min-width: 200px;
-    border: none;
+    border: 3px dashed var(--dettagli-red);
     background: var(--sfondo-white);
-    color: var(--testo-black);
     font-family: var(--font-family-2);
     font-size: clamp(16px, 3vw, 20px);
     cursor: pointer;
@@ -597,6 +596,7 @@
 
   #myBtn:hover {
     opacity: .9;
+    border: 3px solid var(--dettagli-red);
   }
 
   #myBtn svg {
@@ -632,6 +632,20 @@
   }
 }
 
+.social-icon svg {
+  background: transparent;
+}
+
+.social-icon:hover svg {
+  fill: var(--dettagli-red) !important;
+  transform: translateY(-3px);
+  transition: .085s cubic-bezier(0.55, 0.085, 0.68, 0.53);
+}
+
 .content-main-page {
   margin-top: calc(100vh + 25%);
+}
+
+.grid img {
+  object-fit: cover;
 }

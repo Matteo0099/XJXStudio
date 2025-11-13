@@ -1,78 +1,113 @@
+<script setup>
+const videos = [
+  {
+    id: 1,
+    title: "Video 1",
+    thumbnail: "/video/copertine_projects/1.jpeg",
+    url: "https://player.vimeo.com/video/1092841778?h=9c116489cb"
+  },
+  {
+    id: 2,
+    title: "Video 2",
+    thumbnail: "/video/copertine_projects/2.jpeg",
+    url: "https://player.vimeo.com/video/1099415862?h=a96f8bcc38"
+  },
+  {
+    id: 3,
+    title: "Video 3",
+    thumbnail: "/video/copertine_projects/3.jpeg",
+    url: "https://player.vimeo.com/video/1068568004?h=497c4dbaa1"
+  },
+  {
+    id: 4,
+    title: "Video 4",
+    thumbnail: "/video/copertine_projects/4.jpeg",
+    url: "https://player.vimeo.com/video/1084361085?h=7f247a0b7e"
+  },
+  {
+    id: 5,
+    title: "Video 5",
+    thumbnail: "/video/copertine_projects/5.jpeg",
+    url: "https://player.vimeo.com/video/1075833312?h=4332fba3ee"
+  },
+  {
+    id: 6,
+    title: "Video 6",
+    thumbnail: "/video/copertine_projects/6.jpeg",
+    url: "https://player.vimeo.com/video/1130581740?h=6117c62f30"
+  },
+  {
+    id: 7,
+    title: "Video 7",
+    thumbnail: "/video/copertine_projects/7.jpeg",
+    url: "https://player.vimeo.com/video/1130582373?h=f2cbf7688e"
+  }
+]
+
+function scrollToVideo(id) {
+  const element = document.getElementById(`video-${id}`)
+  if (element) {
+    element.scrollIntoView({ behavior: 'smooth' })
+  }
+}
+</script>
+
 <template>
-  <div>
-    <!-- grid with all works -->
-    <!-- 1 (1 /4) -->
-    <div class="card h-full gap-4 mt-12 flex flex-wrap sm:flex-nowrap w-full">
+  <div class="container-xl text-neutral-50 mt-3">
+
+    <!-- Collage di immagini -->
+    <div class="grid grid-cols-1 sm:grid-cols-2 w-full h-full md:grid-cols-3 gap-4">
       <div
-        class="one p-1 w-full flex flex-col md:flex-row justify-between max-w-4xl mx-auto border-2 relative border-neutral-100 my-2 bg-neutral-900">
-        <div class="w-1/2 flex flex-col justify-start items-center">
-          <h1 class="z-50 font-black text-lg sm:text-xl my-2">Project 1</h1>
-          <p class="font-sans font-light text-md md:text-lg px-2 my-2">Lorem ipsum dolor sit amet consectetur
-            adipisicing elit. Cum iusto temporibus autem, nihil molestiae ratione ullam quis suscipit repudiandae, neque
-            cumque, omnis hic assumenda iste amet maxime aliquid optio ut.</p>
-        </div>
-        <div class="w-1/2 flex flex-col justify-center items-center pr-2">
-          <div style="position:relative;"><iframe
-            src="https://player.vimeo.com/video/913494561?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
-            frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write"
-            style="width:100%;height:100%;" title="raduno fine estate 2023"></iframe>
-        </div>
+        v-for="video in videos"
+        :key="video.id"
+        class="cursor-pointer hover:opacity-80 transition"
+        @click="scrollToVideo(video.id)"
+      >
+        <!-- wrapper con aspect ratio -->
+        <div class="aspect-[16/9] w-full overflow-hidden rounded-lg shadow-md">
+          <img
+            :src="video.thumbnail"
+            :alt="video.title"
+            class="w-full h-full object-cover"
+          />
         </div>
       </div>
+      <h1 class="text-2xl pl-8 my-auto">...WORK IN PROGRESS</h1>
     </div>
-    <!-- 2 (2/4)-->
-    <div class="card h-full mt-32 gap-4 flex flex-wrap sm:flex-nowrap w-full">
+
+    <!-- Sezione video -->
+    <div class="mt-10 space-y-10">
       <div
-        class="one p-1 w-full flex flex-col md:flex-row justify-between max-w-4xl mx-auto border-2 relative border-neutral-100 my-2 bg-neutral-900">
-        <div class="w-1/2 flex flex-col justify-center items-center pr-2">
-          <div style="position:relative;"><iframe
-              src="https://player.vimeo.com/video/900183605?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
-              frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write"
-              style="width:100%;height:100%;" title="kendama sposored video"></iframe>
-          </div>
-        </div>
-        <div class="w-1/2 flex flex-col justify-start items-center">
-          <h1 class="z-50 font-black text-lg sm:text-xl my-2">Project 2</h1>
-          <p class="font-sans font-light text-md md:text-lg px-2 my-2">Lorem ipsum dolor sit amet consectetur
-            adipisicing elit. Cum iusto temporibus autem, nihil molestiae ratione ullam quis suscipit repudiandae, neque
-            cumque, omnis hic assumenda iste amet maxime aliquid optio ut.</p>
-        </div>
-      </div>
-    </div>
-    <!-- 3 (3/4) -->
-    <div class="card h-full gap-4 mt-32 flex flex-wrap sm:flex-nowrap w-full">
-      <div
-        class="one p-1 w-full flex flex-col md:flex-row justify-between max-w-4xl mx-auto border-2 relative border-neutral-100 my-2 bg-neutral-900">
-        <div class="w-1/2 flex flex-col justify-start items-center">
-          <h1 class="z-50 font-black text-lg sm:text-xl my-2">Project 3</h1>
-          <p class="font-sans font-light text-md md:text-lg px-2 my-2">Lorem ipsum dolor sit amet consectetur
-            adipisicing elit. Cum iusto temporibus autem, nihil molestiae ratione ullam quis suscipit repudiandae, neque
-            cumque, omnis hic assumenda iste amet maxime aliquid optio ut.</p>
-        </div>
-        <div class="w-1/2 flex flex-col justify-center items-center pr-2">
-          <div style="position:relative;"><iframe
-              src="https://player.vimeo.com/video/918418613?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
-              frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write"
-              style="width:100%;height:100%;" title="kendama sposored video"></iframe>
-          </div>
-        </div>
+        v-for="video in videos"
+        :key="'video-' + video.id"
+        :id="'video-' + video.id"
+        class="p-4 border rounded-lg shadow"
+      >
+        <h2 class="text-lg font-semibold mb-2">{{ video.title }}</h2>
+        <iframe
+          class="w-full aspect-video rounded-lg"
+          :src="video.url"
+          frameborder="0"
+          allowfullscreen
+        ></iframe>
       </div>
     </div>
   </div>
 </template>
 
+
 <script>
-  export default {
-    created() {
-      var scripts = [
-        "https://player.vimeo.com/api/player.js",
-        "js/local.js"
-      ];
-      scripts.forEach(script => {
-        let tag = document.createElement("script");
-        tag.setAttribute("src", script);
-        document.head.appendChild(tag);
-      });
-    }
+export default {
+  created() {
+    var scripts = [
+      "https://player.vimeo.com/api/player.js",
+      "js/local.js"
+    ];
+    scripts.forEach(script => {
+      let tag = document.createElement("script");
+      tag.setAttribute("src", script);
+      document.head.appendChild(tag);
+    });
   }
+}
 </script>

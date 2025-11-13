@@ -1,13 +1,13 @@
 <template>
-  <div class="container z-50 sticky w-full max-w-4xl px-4 mt-24 mx-auto flex flex-col justify-center items-center">
-    <h1 class="text-2xl md:text-3xl font-black">Contact</h1>
+  <div class="container z-50 sticky w-full max-w-4xl px-4 mt-10 mx-auto flex flex-col justify-center items-center">
+    <!-- <h1 class="text-2xl md:text-3xl font-neutral-50">Contact</h1> -->
     <!-- card get in touch -->
     <div class="flex border-2 border-neutral-100 min-w-[250px] sm:min-w-[300px] min-h-[500px] bg-sfuma mt-10">
       <section class="bg-sfuma" id="contact">
         <div class="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8 lg:py-20">
           <div class="mb-4">
             <div class="mb-6 max-w-3xl text-center sm:text-center md:mx-auto md:mb-12">
-              <h2 class="font-heading mb-4 font-bold tracking-tight text-gray-900 dark:text-white text-2xl sm:text-4xl">
+              <h2 class="font-heading mb-4 font-bold tracking-tight text-gray-50 dark:text-white text-2xl sm:text-4xl">
                 Get in Touch
               </h2>
               <p class="mx-auto mt-4 max-w-3xl text-xl text-neutral-50">
@@ -30,7 +30,7 @@
                       </svg>
                     </div>
                     <div class="ml-4 mb-4">
-                      <h3 class="mb-2 text-lg font-medium leading-6 text-gray-900 dark:text-white">Our Address
+                      <h3 class="mb-2 text-lg font-medium leading-6 text-gray-50 dark:text-white">Our Address
                       </h3>
                       <p class="text-neutral-50">Friuli-Venezia-Giulia, Italy</p>
                       <p class="text-neutral-50">34074, Monfalcone(GO)</p>
@@ -49,10 +49,9 @@
                       </svg>
                     </div>
                     <div class="ml-4 mb-4">
-                      <h3 class="mb-2 text-lg font-medium leading-6 text-gray-900 dark:text-white">Contact
-                      </h3>
-                      <p class="text-neutral-50">Mobile: +1 (123) 456-7890</p>
-                      <p class="text-neutral-50">Mail: tailnext@gmail.com</p>
+                      <h3 class="mb-2 text-lg font-medium leading-6 text-gray-50 dark:text-white">Contact</h3>
+                      <p class="text-neutral-50">Mobile: +39 3921141013</p>
+                      <p class="text-neutral-50">Mail: xjxvisuals@gmail.com</p>
                     </div>
                   </li>
                   <li class="flex">
@@ -65,7 +64,7 @@
                       </svg>
                     </div>
                     <div class="ml-4 mb-4">
-                      <h3 class="mb-2 text-lg font-medium leading-6 text-gray-900 dark:text-white">Working
+                      <h3 class="mb-2 text-lg font-medium leading-6 text-gray-50 dark:text-white">Working
                         hours</h3>
                       <p class="text-neutral-50">Monday - Friday: 08:00 - 17:00</p>
                       <p class="text-neutral-50">Saturday &amp; Sunday: 08:00 - 12:00</p>
