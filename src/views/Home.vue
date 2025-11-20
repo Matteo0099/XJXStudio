@@ -64,6 +64,18 @@ const sendEmail = async () => {
     sending.value = false
   }
 }
+
+
+// Funzione per scroll smooth
+const scrollToSection = (sectionId) => {
+  const element = document.getElementById(sectionId);
+  if (element) {
+    element.scrollIntoView({ 
+      behavior: 'smooth',
+      block: 'start'
+    });
+  }
+}
 </script>
 
 <template>
@@ -71,7 +83,7 @@ const sendEmail = async () => {
     <div class="container w-full h-full min-h-screen flex mt-6 justify-center flex-col mx-auto">
       <!-- HERO PAGE -->
       <div class="min-h-screen h-full">
-        <div class="content max-w-4xl mx-auto">
+        <!-- <div class="content max-w-4xl mx-auto">
           <h1 class="font-black title-raduno mb-3 uppercase">OUR PRODUCTIONS</h1>
           <p class="font-regular text-lg max-w-3xl my-4">
             "Checkout last video of the Scarbmafia's raduno"
@@ -89,16 +101,22 @@ const sendEmail = async () => {
               </svg>
             </button>
           </a>
+        </div> -->
+        <div class="content m-auto max-w-4xl w-full">
+          <h1 class="title">Scroll below</h1>
+          <a @click.prevent="scrollToSection('down')" class="down-arrow smooth-scroll">
+            <div class="arrow arrow-first"></div>
+            <div class="arrow arrow-second"></div>
+          </a>
         </div>
-
         <!-- freccia per andare giù -->
-        <a href="#down" class="down-arrow">
-          <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" fill="currentColor"
+        <!-- <a href="#down" class="down-arrow">
+          <svg xmlns="http://www.w3.org/2000/svg" width="34" height="34" fill="currentColor"
             class="bi bi-arrow-down-circle" viewBox="0 0 16 16">
             <path fill-rule="evenodd"
               d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8m15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0M8.5 4.5a.5.5 0 0 0-1 0v5.793L5.354 8.146a.5.5 0 1 0-.708.708l3 3a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 10.293z" />
           </svg>
-        </a>
+        </a> -->
       </div>
 
       <!-- content of all the home -->
