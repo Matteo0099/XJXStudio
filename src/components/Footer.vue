@@ -1,15 +1,15 @@
 <script setup>
-import { onMounted, ref } from 'vue'
+  import { onMounted, ref } from 'vue'
 
-// anno corrente
-const time = ref('')
-const setCurrentYear = () => {
-  const now = new Date();
-  time.value = now.getFullYear();
-}
-onMounted(() => { setCurrentYear() })
+  // anno corrente
+  const time = ref('')
+  const setCurrentYear = () => {
+    const now = new Date();
+    time.value = now.getFullYear();
+  }
+  onMounted(() => { setCurrentYear() })
 
-
+  
 </script>
 
 
@@ -31,7 +31,7 @@ onMounted(() => { setCurrentYear() })
 
           <ul class="flex justify-center gap-6 mt-8 md:gap-8 sm:justify-start">
             <li>
-              <a href="/" rel="noopener noreferrer" target="_blank"
+              <a :href="$globalData.socialLinks.whatsapp" rel="noopener noreferrer" target="_blank"
                 class="text-neutral-50 transition hover:text-neutral-50/75">
                 <span class="sr-only">Facebook</span>
                 <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
@@ -43,7 +43,7 @@ onMounted(() => { setCurrentYear() })
             </li>
 
             <li>
-              <a href="/" rel="noopener noreferrer" target="_blank"
+              <a :href="$globalData.socialLinks.whatsapp" rel="noopener noreferrer" target="_blank"
                 class="text-neutral-50 transition hover:text-neutral-50/75">
                 <span class="sr-only">Instagram</span>
                 <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
@@ -55,7 +55,7 @@ onMounted(() => { setCurrentYear() })
             </li>
 
             <li>
-              <a href="/" rel="noopener noreferrer" target="_blank"
+              <a :href="$globalData.socialLinks.whatsapp" rel="noopener noreferrer" target="_blank"
                 class="text-neutral-50 transition hover:text-neutral-50/75">
                 <span class="sr-only">Twitter</span>
                 <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
@@ -66,7 +66,7 @@ onMounted(() => { setCurrentYear() })
             </li>
 
             <li>
-              <a href="/" rel="noopener noreferrer" target="_blank"
+              <a :href="$globalData.socialLinks.whatsapp" rel="noopener noreferrer" target="_blank"
                 class="text-neutral-50 transition hover:text-neutral-50/75">
                 <span class="sr-only">GitHub</span>
                 <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
@@ -78,7 +78,7 @@ onMounted(() => { setCurrentYear() })
             </li>
 
             <li>
-              <a href="/" rel="noopener noreferrer" target="_blank"
+              <a :href="$globalData.socialLinks.whatsapp" rel="noopener noreferrer" target="_blank"
                 class="text-neutral-50 transition hover:text-neutral-50/75">
                 <span class="sr-only">Dribbble</span>
                 <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
@@ -139,7 +139,7 @@ onMounted(() => { setCurrentYear() })
                   Customer service
                 </li>
                 <li>
-                  Project's mentoring                  
+                  Project's mentoring
                 </li>
               </ul>
             </nav>
@@ -231,10 +231,11 @@ onMounted(() => { setCurrentYear() })
       <div class="pt-6 mt-12 border-t border-neutral-150">
         <div class="text-center sm:flex sm:justify-between sm:text-left">
           <p class="text-sm text-neutral-50">
-            <p>
-              <span>Website made by <a href="https://matteomania.netlify.app" class="underline hover:opacity-75">Mania'Matteo</a></span>
-            </p>
-            <!-- <a class="inline-block text-neutral-50 underline transition hover:text-neutral-50/75" href="/">
+          <p>
+            <span>Website made by <a href="https://matteomania.netlify.app"
+                class="underline hover:opacity-75">Mania'Matteo</a></span>
+          </p>
+          <!-- <a class="inline-block text-neutral-50 underline transition hover:text-neutral-50/75" href="/">
               Terms & Conditions
             </a>
             <span>&middot;</span>

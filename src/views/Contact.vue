@@ -2,7 +2,7 @@
   <div class="container z-50 sticky w-full max-w-4xl px-4 mt-10 mx-auto flex flex-col justify-center items-center">
     <!-- <h1 class="text-2xl md:text-3xl font-neutral-50">Contact</h1> -->
     <!-- card get in touch -->
-    <div class="flex border-2 border-neutral-100 min-w-[250px] sm:min-w-[300px] min-h-[500px] bg-sfuma mt-10">
+    <div class="flex border-2 border-neutral-100 rounded-xl backdrop-brightness-50 min-w-[250px] sm:min-w-[300px] min-h-[500px] bg-sfuma mt-10">
       <section class="bg-sfuma" id="contact">
         <div class="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8 lg:py-20">
           <div class="mb-4">

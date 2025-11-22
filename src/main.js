@@ -1,7 +1,8 @@
 import { createApp } from 'vue';
 import App from './App.vue';
+import globalData from './plugins/gloabalData';
 
-//styles
+// styles
 import './style/font.css';
 import './style/reset.css';
 import './index.css';
@@ -13,7 +14,7 @@ import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 
-// init Swiper:
+// Swiper
 const swiper = new Swiper('.swiper', {
   direction: 'vertical',
   loop: true,
@@ -37,20 +38,23 @@ inject();
 import { createRouter, createWebHistory } from 'vue-router';
 
 // all pages
-const Home = () => import ('./views/Home.vue')
+const Home = () => import('./views/Home.vue')
 const About = () => import('./views/About.vue')
 const Work = () => import('./views/Work.vue')
 const Services = () => import('./views/Services.vue')
 const Contact = () => import('./views/Contact.vue')
 
 const routes = [
-  { path: '/',          name: 'Home',     component: Home },
-  { path: '/About',     name: 'About',    component: About },
-  { path: '/Work',      name: 'Work',     component: Work },
-  { path: '/Services',  name: 'Services', component: Services },
-  { path: '/Contact',   name: 'Contact',  component: Contact }
+  { path: '/', name: 'Home', component: Home },
+  { path: '/About', name: 'About', component: About },
+  { path: '/Work', name: 'Work', component: Work },
+  { path: '/Services', name: 'Services', component: Services },
+  { path: '/Contact', name: 'Contact', component: Contact }
 ]
 
 const router = createRouter({ history: createWebHistory(), routes })
+const app = createApp(App)
 
-createApp(App).use(router).mount('#app')
+app.use(router) 
+app.use(globalData) 
+app.mount('#app')
