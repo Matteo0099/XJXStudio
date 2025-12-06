@@ -29,7 +29,7 @@ const globalData = inject('globalData')
       <!-- background opaco -->
       <!-- <div class="bg-hero"></div> -->
       <!-- (fake) navigation -->
-      <div class="w-full sticky top-0 left-0 right-0 z-[99] max-h-20 min-h-[40px] h-full bg-accent p-0">
+      <div class="w-full sticky top-0 left-0 right-0 z-[99] max-h-[3rem] min-h-[40px] h-full bg-accent p-0">
         <nav class="fakeNav pt-3 flex justify-center items-center">
           <div class="social-wrap flex ml-5 gap-4 text-sm">
             <a :href="$globalData.socialLinks.instagram" target="_blank" class="link-insta">
@@ -101,7 +101,7 @@ const globalData = inject('globalData')
       </div>
       <!-- for content of the page -->
       <router-view v-slot="{ Component, route }">
-        <div :key="route.name" class="min-h-screen max-w-full overflow-x-hidden">
+        <div :key="route.name" class="min-h-screen max-w-full overflow-x-hidden z-[999]">
           <component :is="Component"></component>
         </div>
       </router-view>

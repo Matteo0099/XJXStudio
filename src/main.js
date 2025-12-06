@@ -43,13 +43,15 @@ const About = () => import('./views/About.vue')
 const Work = () => import('./views/Work.vue')
 const Services = () => import('./views/Services.vue')
 const Contact = () => import('./views/Contact.vue')
+const Faq = () => import('./views/Faq.vue')
 
 const routes = [
   { path: '/', name: 'Home', component: Home },
   { path: '/About', name: 'About', component: About },
   { path: '/Work', name: 'Work', component: Work },
   { path: '/Services', name: 'Services', component: Services },
-  { path: '/Contact', name: 'Contact', component: Contact }
+  { path: '/Contact', name: 'Contact', component: Contact },
+  { path: '/Faq', name: 'Faq', component: Faq }
 ]
 
 const router = createRouter({ history: createWebHistory(), routes })

@@ -128,7 +128,7 @@
             <p class="text-lg font-medium text-white">Our Services</p>
 
             <nav class="mt-8">
-              <ul class="space-y-4 text-sm">
+              <ul class="space-y-4 text-sm list-item list-disc ml-4">
                 <li>
                   Videomaking
                 </li>
@@ -151,9 +151,8 @@
             <nav class="mt-8">
               <ul class="space-y-4 text-sm">
                 <li>
-                  <a class="text-white transition hover:text-white/75" href="/">
-                    FAQs
-                  </a>
+                  <RouterLink class="hover:underline hover:text-gray-50 transition-colors" to="/Faq">Faq's
+                  </RouterLink>
                 </li>
 
                 <li>

@@ -1,10 +1,10 @@
 const globalData = {
   socialLinks: {
-    instagram: "https://instagram.com/tuoprofilo",
-    facebook: "https://facebook.com/tuapagina",
-    youtube: "https://youtube.com/tuoutente",
-    tiktok: "https://tiktok.com/tuoutente",
-    vimeo: "https://vimeo.com/utente",
+    instagram: "https://www.instagram.com/xjxvisuals?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==",
+    facebook: "https://facebook.com/xjxvisuals",
+    youtube: "https://youtube.com/playlist?list=PLPRhm2QPQhNVFrPtFnle3lK9Kiff6zGik&si=48x37fNs_DwwAQbk",
+    tiktok: "https://tiktok.com/xjxvisuals",
+    vimeo: "https://vimeo.com/user208734932?fl=pp&fe=sh",
     whatsapp: "https://wa.me/+393921141013"
   },
   // Other data
