@@ -128,7 +128,11 @@
 
             <nav class="mt-8">
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
               <ul class="space-y-4 text-sm list-item list-disc ml-4">
+=======
+              <ul class="space-y-4 text-sm list-disc pl-4">
+>>>>>>> Stashed changes
 =======
               <ul class="space-y-4 text-sm list-disc pl-4">
 >>>>>>> Stashed changes
@@ -155,9 +159,12 @@
               <ul class="space-y-4 text-sm">
                 <li>
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
                   <RouterLink class="hover:underline hover:text-gray-50 transition-colors" to="/Faq">Faq's
                   </RouterLink>
 =======
+=======
+>>>>>>> Stashed changes
                   <a class="text-white transition hover:text-white/75" href="/Faq">
                     FAQs
                   </a>
