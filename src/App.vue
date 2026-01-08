@@ -23,9 +23,12 @@ const globalData = inject('globalData')
     </VuePreloader> -->
     <!-- main page -->
     <main class="main-content min-h-screen font-nunito">
-      <video src="/video/video_sito_compressed.mp4" id="myVideo" autoplay="true" loop="true" muted="muted"
-        playsinline="playsinline"> <!--autoplay-->
+      <video src="/video/showreel_2026.mp4" id="myVideo" autoplay="true" loop="true" muted="muted"
+        playsinline="playsinline">
       </video>
+      <!-- <video src="/video/video_sito_compressed.mp4" id="myVideo" autoplay="true" loop="true" muted="muted"
+        playsinline="playsinline">
+      </video> -->
       <!-- background opaco -->
       <!-- <div class="bg-hero"></div> -->
       <!-- (fake) navigation -->
@@ -121,23 +124,27 @@ const globalData = inject('globalData')
       <div class="inner-wrap">
         <ul class="gap-4 hidden" ref="listNav">
           <li>
-            <RouterLink class="hover:underline hover:text-gray-50 transition-colors" to="/" @click="openNav">Home
+            <RouterLink class="hover:underline hover:opacity-80 transition-colors" to="/" @click="openNav">Home
             </RouterLink>
           </li>
           <li>
-            <RouterLink class="hover:underline hover:text-gray-50 transition-colors" to="/About" @click="openNav">About
+            <RouterLink class="hover:underline hover:opacity-80 transition-colors" to="/About" @click="openNav">About
             </RouterLink>
           </li>
           <li>
-            <RouterLink class="hover:underline hover:text-gray-50 transition-colors" to="/Work" @click="openNav">Work
+            <RouterLink class="hover:underline hover:opacity-80 transition-colors" to="/Work" @click="openNav">Work
             </RouterLink>
           </li>
           <li>
-            <RouterLink class="hover:underline hover:text-gray-50 transition-colors" to="/Services" @click="openNav">
+            <RouterLink class="hover:underline hover:opacity-80 transition-colors" to="/Faq" @click="openNav">Faq's
+            </RouterLink>
+          </li>
+          <li>
+            <RouterLink class="hover:underline hover:opacity-80 transition-colors" to="/Services" @click="openNav">
               Services</RouterLink>
           </li>
           <li>
-            <RouterLink class="hover:underline hover:text-gray-50 transition-colors" to="/Contact" @click="openNav">
+            <RouterLink class="hover:underline hover:opacity-80 transition-colors" to="/Contact" @click="openNav">
               Contact</RouterLink>
           </li>
         </ul>

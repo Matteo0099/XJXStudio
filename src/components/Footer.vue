@@ -9,7 +9,6 @@
   }
   onMounted(() => { setCurrentYear() })
 
-  
 </script>
 
 
@@ -77,7 +76,7 @@
               </a>
             </li>
 
-            <li>
+            <!-- <li>
               <a :href="$globalData.socialLinks.whatsapp" rel="noopener noreferrer" target="_blank"
                 class="text-neutral-50 transition hover:text-neutral-50/75">
                 <span class="sr-only">Dribbble</span>
@@ -87,7 +86,7 @@
                     clip-rule="evenodd" />
                 </svg>
               </a>
-            </li>
+            </li> -->
           </ul>
         </div>
 
@@ -98,12 +97,12 @@
             <nav class="mt-8">
               <ul class="space-y-4 text-sm">
                 <li>
-                  <a class="text-white transition hover:text-white/75" href="/">
+                  <a class="text-white transition hover:text-white/75" href="/About">
                     Company History
                   </a>
                 </li>
 
-                <li>
+                <!-- <li>
                   <a class="text-white transition hover:text-white/75" href="/">
                     Meet the Team
                   </a>
@@ -119,7 +118,7 @@
                   <a class="text-white transition hover:text-white/75" href="/">
                     Careers
                   </a>
-                </li>
+                </li> -->
               </ul>
             </nav>
           </div>
@@ -128,7 +127,11 @@
             <p class="text-lg font-medium text-white">Our Services</p>
 
             <nav class="mt-8">
+<<<<<<< Updated upstream
               <ul class="space-y-4 text-sm list-item list-disc ml-4">
+=======
+              <ul class="space-y-4 text-sm list-disc pl-4">
+>>>>>>> Stashed changes
                 <li>
                   Videomaking
                 </li>
@@ -151,17 +154,23 @@
             <nav class="mt-8">
               <ul class="space-y-4 text-sm">
                 <li>
+<<<<<<< Updated upstream
                   <RouterLink class="hover:underline hover:text-gray-50 transition-colors" to="/Faq">Faq's
                   </RouterLink>
+=======
+                  <a class="text-white transition hover:text-white/75" href="/Faq">
+                    FAQs
+                  </a>
+>>>>>>> Stashed changes
                 </li>
 
                 <li>
-                  <a class="text-white transition hover:text-white/75" href="/">
+                  <a class="text-white transition hover:text-white/75" :href="$globalData.email">
                     Support
                   </a>
                 </li>
 
-                <li>
+                <!-- <li>
                   <a class="flex group justify-center sm:justify-start gap-1.5" href="/">
                     <span class="text-white transition group-hover:text-white/75">
                       Live Chat
@@ -173,7 +182,7 @@
                       <span class="relative inline-flex w-2 h-2 bg-green-500 rounded-full"></span>
                     </span>
                   </a>
-                </li>
+                </li> -->
               </ul>
             </nav>
           </div>
