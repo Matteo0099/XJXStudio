@@ -1,19 +1,3 @@
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-<template>
-    <div class="z-[999] flex justify-center items-center relative text-white mt-24 flex-col">
-        <h1 class="text-2xl">Faq: Domande frequenti</h1>
-        <div>
-            <ul class="list-item list-disc ml-2 mt-2">
-                <li v-for="(faq, index) in faqs" :key="index">
-                    <strong>{{ index + 1 }}. {{ faq.domanda }}</strong>
-                    <p>{{ faq.risposta }}</p>
-                </li>
-            </ul>
-        </div>
-    </div>
-</template>
-
 <script>
 export default {
     name: 'FaqComponent',
@@ -34,9 +18,9 @@ export default {
     }
 }
 </script>
-=======
-=======
->>>>>>> Stashed changes
+
+
+
 <script setup>
 import { ref } from 'vue'
 
@@ -285,9 +269,4 @@ const closeAll = () => {
     padding: 1.25rem;
   }
 }
-<<<<<<< Updated upstream
 </style>
->>>>>>> Stashed changes
-=======
-</style>
->>>>>>> Stashed changes
